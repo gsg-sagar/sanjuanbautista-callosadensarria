@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia — Parròquia Sant Joan Baptista · Callosa d'en Sarrià</title>
+<meta name="description" content="Historia y patrimonio de la Parroquia San Juan Bautista de Callosa d'en Sarrià. Iglesia arciprestal desde 1578, órgano barroco de 1754.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F3EC;
+    --surface: #FFFFFF;
+    --surface-alt: #EFE8DC;
+    --ink: #1A232A;
+    --ink-soft: #4B5663;
+    --azul: #1C5A73;
+    --azul-deep: #0D2D3A;
+    --azul-pale: #E8F2F5;
+    --azul-glow: #0284C7;
+    --oro: #C5A059;
+    --oro-soft: #F5E9C9;
+    --oro-glow: #FACC15;
+    --line: #E2D9C8;
+    --radius: 14px;
+    --radius-sm: 8px;
+    --max: 1180px;
+    --shadow-sm: 0 2px 8px rgba(13,45,58,0.06);
+    --shadow-md: 0 8px 24px rgba(13,45,58,0.1);
+    --shadow-glow: 0 12px 32px rgba(28,90,115,0.22), 0 0 20px rgba(197,160,89,0.25);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Public Sans', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .display {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+  a { color: var(--azul); text-decoration: none; transition: all 0.25s ease; }
+  a:hover { color: var(--azul-deep); }
+  svg { display: block; flex-shrink: 0; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+  :focus-visible { outline: 3px solid var(--oro); outline-offset: 3px; }
+  button { font-family: inherit; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(246,243,236,0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(226,217,200,0.8);
+    box-shadow: 0 4px 20px rgba(13,45,58,0.05);
+    transition: all 0.3s ease;
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 28px; max-width: var(--max); margin: 0 auto; gap: 20px;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .brand-icon { width: 44px; height: 44px; flex-shrink: 0; transition: transform 0.3s ease; }
+  .brand:hover .brand-icon { transform: scale(1.06) rotate(-2deg); }
+  .brand-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.15rem; font-weight: 800;
+    color: var(--azul-deep); line-height: 1.2; letter-spacing: -0.02em;
+  }
+  .brand-text small {
+    display: block; font-size: 0.64rem; letter-spacing: .12em;
+    color: var(--oro); font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700; text-transform: uppercase; margin-top: 2px;
+  }
+  .header-actions { display: flex; align-items: center; gap: 24px; }
+  nav.links { display: flex; gap: 20px; align-items: center; }
+  nav.links a { color: var(--ink); font-weight: 600; font-size: 0.94rem; position: relative; padding: 6px 2px; }
+  nav.links a::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+    background: linear-gradient(90deg, var(--azul), var(--oro)); transition: width 0.3s ease; border-radius: 2px;
+  }
+  nav.links a:hover { color: var(--azul); text-decoration: none; }
+  nav.links a:hover::after { width: 100%; }
+  nav.links a.active { color: var(--azul); }
+  nav.links a.active::after { width: 100%; }
+  .header-social {
+    display: flex; gap: 8px; align-items: center;
+    padding-left: 16px; border-left: 1px solid var(--line);
+  }
+  .social-btn {
+    display: flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--surface); border: 1px solid var(--line);
+    color: var(--azul-deep); transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .social-btn svg { width: 16px; height: 16px; fill: currentColor; }
+  .social-btn:hover {
+    background: var(--azul); color: #fff; border-color: var(--azul);
+    transform: translateY(-2px); box-shadow: 0 4px 12px rgba(28,90,115,0.35);
+  }
+  .social-btn.whatsapp-btn:hover { background: #25D366; border-color: #25D366; box-shadow: 0 4px 12px rgba(37,211,102,0.4); }
+  .lang-switch {
+    display: flex; gap: 2px; background: var(--surface-alt);
+    padding: 3px; border-radius: 20px; border: 1px solid var(--line);
+  }
+  .lang-switch button {
+    background: none; border: none; color: var(--ink-soft);
+    font-size: 0.76rem; font-weight: 700; padding: 4px 10px;
+    border-radius: 14px; cursor: pointer; letter-spacing: .03em; transition: all 0.25s ease;
+  }
+  .lang-switch button.active { background: var(--azul-deep); color: #fff; box-shadow: 0 2px 6px rgba(13,45,58,0.25); }
+  #nav-toggle { display: none; }
+  .burger { display: none; cursor: pointer; background: none; border: none; padding: 6px; border-radius: 6px; }
+  .burger span { display: block; width: 24px; height: 2px; background: var(--azul-deep); margin: 5px 0; transition: all 0.3s ease; }
+
+  @media (max-width: 960px) { .header-social { display: none; } }
+  @media (max-width: 880px) {
+    nav.links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: flex-start; gap: 0;
+      background: var(--surface); border-bottom: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-height: 0; overflow: hidden; transition: max-height 0.35s ease;
+    }
+    nav.links a { padding: 14px 28px; width: 100%; border-top: 1px solid var(--line); }
+    nav.links a::after { display: none; }
+    #nav-toggle:checked ~ .header-actions nav.links { max-height: 420px; }
+    .burger { display: block; }
+  }
+
+  /* Page hero */
+  .page-hero {
+    background: linear-gradient(135deg, var(--azul-deep) 0%, #154556 100%);
+    color: #fff; padding: 64px 0 52px; position: relative; overflow: hidden;
+  }
+  .page-hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 80% 30%, rgba(56,189,248,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .page-hero .wrap { position: relative; z-index: 1; }
+  .page-hero .eyebrow {
+    font-size: 0.82rem; color: var(--oro-soft); font-weight: 800;
+    margin-bottom: 12px; letter-spacing: .08em; text-transform: uppercase;
+  }
+  .page-hero h1 { font-size: clamp(2rem, 3.8vw, 3rem); color: #fff; font-weight: 800; line-height: 1.15; }
+  .page-hero p { color: #C8DDE3; margin-top: 14px; font-size: 1.08rem; max-width: 60ch; }
+
+  /* Section shell */
+  section { padding: 88px 0; position: relative; }
+  .section-head { max-width: 680px; margin-bottom: 50px; }
+
+  /* Historia blocks */
+  #historia { background: var(--bg); padding-top: 72px; }
+  .historia-block {
+    display: grid; grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px; align-items: flex-start; padding: 44px 0;
+  }
+  .historia-block + .historia-block { border-top: 1px solid var(--line); }
+  .historia-block:first-child { padding-top: 0; }
+  .historia-block h3 { font-size: 1.4rem; margin-bottom: 14px; color: var(--azul-deep); font-weight: 800; }
+  .historia-block p { margin: 0 0 14px; color: var(--ink-soft); font-size: 1.04rem; }
+  .historia-block p:last-child { margin-bottom: 0; }
+  .historia-block strong { color: var(--ink); font-weight: 700; }
+  .fuente { font-size: 0.88rem; color: var(--ink-soft); margin-top: 12px; font-style: italic; }
+  .historia-photo-wrap {
+    position: relative; border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow-md); border: 1px solid var(--line);
+    aspect-ratio: 4/3; background: var(--surface-alt); transition: all 0.35s ease;
+  }
+  .historia-photo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+  .historia-block:hover .historia-photo-wrap img { transform: scale(1.05); }
+  .historia-photo-wrap:hover { box-shadow: var(--shadow-glow); border-color: var(--oro); }
+  figure { margin: 0; }
+  figcaption { margin-top: 10px; font-size: 0.88rem; color: var(--ink-soft); font-weight: 600; text-align: center; }
+  @media (max-width: 900px) { .historia-block { grid-template-columns: 1fr; gap: 24px; } }
+
+  /* Footer */
+  footer {
+    background: var(--azul-deep); color: #EDE9DD; padding: 64px 0 32px; position: relative;
+  }
+  footer::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--azul), var(--oro), var(--azul));
+  }
+  footer .wrap { display: grid; grid-template-columns: 1fr 0.9fr 1.1fr 1.3fr; gap: 36px; }
+  footer h3 { color: #fff; font-size: 1.1rem; margin-bottom: 16px; font-weight: 800; }
+  footer p, footer address { color: #BCCECF; font-style: normal; font-size: 0.95rem; line-height: 1.7; }
+  footer a { color: #EDE9DD; }
+  footer a:hover { color: var(--oro-soft); }
+  .obispado-contact-info { display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; line-height: 1.5; }
+  .obispado-contact-info strong { color: var(--oro-glow); font-weight: 700; }
+  .obispado-contact-info a { color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.4); transition: all 0.2s ease; }
+  .obispado-contact-info a:hover { color: var(--oro-glow); text-decoration-color: var(--oro-glow); }
+  .footer-social { display: flex; gap: 12px; margin-top: 18px; }
+  .footer-social a {
+    display: flex; align-items: center; justify-content: center;
+    width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.06);
+    color: #EDE9DD; transition: all 0.3s ease;
+  }
+  .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+  .footer-social a:hover { border-color: var(--oro); background: var(--oro); color: #fff; transform: translateY(-3px); box-shadow: 0 4px 16px rgba(197,160,89,0.5); }
+  .footer-social a.whatsapp-btn:hover { background: #25D366; border-color: #25D366; box-shadow: 0 4px 16px rgba(37,211,102,0.5); }
+  .footer-bottom {
+    max-width: var(--max); margin: 48px auto 0; padding: 24px 28px 0;
+    border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.84rem; color: #8CA4A8;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  @media (max-width: 980px) { footer .wrap { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  @media (max-width: 640px) { footer .wrap { grid-template-columns: 1fr; gap: 28px; } .footer-bottom { flex-direction: column; text-align: center; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" fill="url(#blueDomeBg2)" stroke="#C5A059" stroke-width="1.5"/>
+        <rect x="12" y="32" width="24" height="4" rx="1" fill="#E5E7EB"/>
+        <rect x="14" y="30" width="20" height="2" fill="#C5A059"/>
+        <path d="M14 30C14 19 34 19 34 30Z" fill="url(#domeGradient2)"/>
+        <path d="M24 19.5V30" stroke="#FACC15" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M19 22C21 24 22 27 22 30" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/>
+        <path d="M29 22C27 24 26 27 26 30" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/>
+        <rect x="22" y="14" width="4" height="6" fill="#F8FAFC"/>
+        <path d="M24 8V14M21.5 10.5H26.5" stroke="#FACC15" stroke-width="1.8" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="blueDomeBg2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0D2D3A"/><stop stop-color="#1C5A73"/>
+          </linearGradient>
+          <linearGradient id="domeGradient2" x1="14" y1="19.5" x2="34" y2="30" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0284C7"/><stop stop-color="#1E3A8A"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="brand-text">
+        Sant Joan Baptista
+        <small>Callosa d'en Sarrià</small>
+      </div>
+    </a>
+
+    <input type="checkbox" id="nav-toggle">
+    <label class="burger" for="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </label>
+
+    <div class="header-actions">
+      <nav class="links">
+        <a href="index.html#horarios">Horarios</a>
+        <a href="index.html#pastoral">Pastoral</a>
+        <a href="index.html#cofradias">Cofradías</a>
+        <a href="index.html#donativos">Donativos</a>
+        <a href="historia.html" class="active">Historia</a>
+        <a href="index.html#sacerdotes">Sacerdotes</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-social">
+        <a href="https://www.instagram.com/parroquia_callosa_den_sarria/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/p/Parroquia-San-Juan-Bautista-Callosa-den-Sarri%C3%A0-100067966658353/" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        </a>
+        <a href="https://chat.whatsapp.com/4XPGUFaeKGC9qEePxVf1zh?s=sh&p=a&mlu=4&ilr=4" class="social-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Grupo de WhatsApp Parroquia" title="Grupo de WhatsApp de la Parroquia">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <button type="button" class="active">ES</button>
+        <button type="button">VAL</button>
+        <button type="button">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Patrimonio e Historia</div>
+    <h1>Historia de la parroquia</h1>
+    <p>Conoce la historia, el arte y el patrimonio espiritual de la Iglesia Arciprestal de San Juan Bautista y las capillas de Callosa d'en Sarrià.</p>
+  </div>
+</div>
+
+<section id="historia">
+  <div class="wrap">
+
+    <div class="historia-block">
+      <div>
+        <h3>Iglesia Arciprestal San Juan Bautista</h3>
+        <p>La primera constancia documental sobre la edificación del templo actual data de <strong>1574</strong>. En <strong>1578</strong>, el obispo e inquisidor Francisco de Mesa la inauguró oficialmente como templo parroquial de Callosa d'en Sarrià.</p>
+        <p>Entre <strong>1765 y 1786</strong> se emprendió la gran ampliación del crucero y el transepto, erigiéndose su emblemático tambor y la cúpula de tejas azules y blancas vidriadas, perfil arquitectónico de referencia en todo el valle de Guadalest.</p>
+        <p>La majestuosa fachada principal de estilo neoclásico clasicista se construyó entre <strong>1819 y 1865</strong> utilizando bloques de mármol labrado procedentes de las canteras locales de Callosa. En <strong>1917</strong> se culminó el cuerpo superior y remate del campanario.</p>
+        <p class="fuente">Historia documentada empíricamente por el insigne cronista e historiador callosino <strong>Adolfo Salvá Ballester</strong> en su obra de referencia <em>La Villa de Callosa de Ensarriá</em> (1960) y sus manuscritos sobre visitas pastorales (1633-1807).</p>
+      </div>
+      <figure>
+        <div class="historia-photo-wrap">
+          <img src="imagenes/fachada.jpg" alt="Fachada de mármol neoclásica de la Iglesia San Juan Bautista en Callosa d'en Sarrià">
+        </div>
+        <figcaption>Fachada principal de mármol, Plaça d'Espanya</figcaption>
+      </figure>
+    </div>
+
+    <div class="historia-block">
+      <div>
+        <h3>Órgano Barroco de 1754</h3>
+        <p>Construido originalmente en <strong>1754</strong> para el convento franciscano de Sant Francesc en Cocentaina, este histórico instrumento fue adquirido por la parroquia tras la desamortización e instalado en el coro alto del templo en <strong>1845</strong>.</p>
+        <p>Cuenta con una impresionante caja barroca de madera policromada y labrada a mano, albergando un valioso conjunto de tubos armónicos restaurados. Es reconocido como una de las joyas vivas del patrimonio organístico de la Comunidad Valenciana.</p>
+      </div>
+      <figure>
+        <div class="historia-photo-wrap">
+          <img src="imagenes/organo.jpg" alt="Órgano barroco de 1754 de la parroquia de Callosa d'en Sarrià">
+        </div>
+        <figcaption>Órgano barroco histórico de 1754 en el coro alto</figcaption>
+      </figure>
+    </div>
+
+    <div class="historia-block">
+      <div>
+        <h3>Capilla de la Virgen de las Injurias</h3>
+        <p>Ubicada en el pintoresco y tradicional barrio histórico de les Injúries (Carrer Verge de les Injúries), la ermita o capilla de la Virgen de las Injurias constituye un arraigado epicentro de fe y devoción popular en Callosa d'en Sarrià.</p>
+        <p>Consagrada a la advocación mariana de la Mare de Déu de les Injúries, la capilla es custodia por su Cofradía Parroquial, que dinamiza las celebraciones de su festividad y los actos litúrgicos del barrio.</p>
+        <p>Además, es el lugar de reunión para la oración eucarística parroquial, donde se celebra semanalmente la <strong>Exposición y Adoración del Santísimo Sacramento</strong> todos los jueves por la mañana a las 09:30 h.</p>
+      </div>
+      <figure>
+        <div class="historia-photo-wrap">
+          <img src="imagenes/capilla_virgeninjurias.webp" alt="Capilla de la Virgen de las Injurias en Callosa d'en Sarrià">
+        </div>
+        <figcaption>Capilla de la Virgen de las Injurias, barrio de les Injúries</figcaption>
+      </figure>
+    </div>
+
+    <div class="historia-block">
+      <div>
+        <h3>Interior del Templo Parroquial</h3>
+        <p>El interior de la iglesia responde a una planta de cruz latina con nave central de gran esbeltez cubierta con bóveda de cañón y lunetos, bordeada por capillas laterales intercomunicadas.</p>
+        <p>Sus pilastras con capiteles corintios ornamentados y el espacio del altar mayor invitan al recogimiento, la oración y la contemplación litúrgica en el corazón espiritual del municipio.</p>
+      </div>
+      <figure>
+        <div class="historia-photo-wrap">
+          <img src="imagenes/interior.jpg" alt="Interior de la gran nave principal de la Iglesia San Juan Bautista">
+        </div>
+        <figcaption>Interior de la nave principal y altar del templo</figcaption>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div>
+      <h3>Parròquia Sant Joan Baptista</h3>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/parroquia_callosa_den_sarria/" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/p/Parroquia-San-Juan-Bautista-Callosa-den-Sarri%C3%A0-100067966658353/" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        </a>
+        <a href="https://chat.whatsapp.com/4XPGUFaeKGC9qEePxVf1zh?s=sh&p=a&mlu=4&ilr=4" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp Parroquia" title="WhatsApp de la Parroquia">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+      <p style="margin-top:14px;"><a href="politica.html" style="color:#BCCECF;font-size:0.88rem;text-decoration:underline;text-underline-offset:3px;">Política de privacidad y cookies</a></p>
+    </div>
+    <div>
+      <h3>Despacho parroquial</h3>
+      <address>Plaça del Convent, 1<br>03510 Callosa d'en Sarrià<br>Alicante</address>
+    </div>
+    <div>
+      <h3>Contacto Parroquia</h3>
+      <address><a href="mailto:parroquiacallosadensarria@gmail.com">parroquiacallosadensarria@gmail.com</a></address>
+    </div>
+    <div>
+      <h3>Obispado Orihuela-Alicante</h3>
+      <address class="obispado-contact-info">
+        <div><strong>Teléfono:</strong> <a href="tel:965204822">965 20 48 22</a> - <a href="tel:965204909">965 204 909</a></div>
+        <div><strong>Correo electrónico:</strong><br><a href="mailto:informacion@diocesisoa.org">informacion@diocesisoa.org</a><br><a href="mailto:obispado@diocesisoa.org">obispado@diocesisoa.org</a></div>
+        <div><strong>Dirección:</strong> Calle Marco Oliver, 5, 03009 Alicante</div>
+        <div><strong>Web oficial:</strong> <a href="https://diocesisoa.org/" target="_blank" rel="noopener">diocesisoa.org →</a></div>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Parròquia Sant Joan Baptista — Callosa d'en Sarrià</span>
+    <span>Diócesis de Orihuela-Alicante</span>
+  </div>
+</footer>
+
+</body>
+</html>

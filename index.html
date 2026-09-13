@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parròquia Sant Joan Baptista — Callosa d'en Sarrià</title>
+<meta name="description" content="Parroquia San Juan Bautista de Callosa d'en Sarrià. Horarios de misa, pastoral, ITIO, Curso Alpha, cofradías y contacto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F3EC;
+    --surface: #FFFFFF;
+    --surface-alt: #EFE8DC;
+    --ink: #1A232A;
+    --ink-soft: #4B5663;
+    --azul: #1C5A73;
+    --azul-deep: #0D2D3A;
+    --azul-pale: #E8F2F5;
+    --azul-glow: #0284C7;
+    --oro: #C5A059;
+    --oro-soft: #F5E9C9;
+    --oro-glow: #FACC15;
+    --alpha-red: #E11D48;
+    --line: #E2D9C8;
+    --radius: 14px;
+    --radius-sm: 8px;
+    --max: 1180px;
+    --shadow-sm: 0 2px 8px rgba(13, 45, 58, 0.06);
+    --shadow-md: 0 8px 24px rgba(13, 45, 58, 0.1);
+    --shadow-glow: 0 12px 32px rgba(28, 90, 115, 0.22), 0 0 20px rgba(197, 160, 89, 0.25);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Public Sans', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  a { color: var(--azul); text-decoration: none; transition: all 0.25s ease; }
+  a:hover { color: var(--azul-deep); }
+  svg { display: block; flex-shrink: 0; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+  :focus-visible { outline: 3px solid var(--oro); outline-offset: 3px; }
+  button { font-family: inherit; }
+
+  /* ---------- Unified Modern Glass Header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(246, 243, 236, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(226, 217, 200, 0.8);
+    box-shadow: 0 4px 20px rgba(13, 45, 58, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 28px;
+    max-width: var(--max);
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+  .brand-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  .brand:hover .brand-icon {
+    transform: scale(1.06) rotate(-2deg);
+  }
+  .brand-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--azul-deep);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  .brand-text small {
+    display: block;
+    font-size: 0.64rem;
+    letter-spacing: .12em;
+    color: var(--oro);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  nav.links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  nav.links a {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.94rem;
+    position: relative;
+    padding: 6px 2px;
+  }
+  nav.links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--azul), var(--oro));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+  nav.links a:hover {
+    color: var(--azul);
+    text-decoration: none;
+  }
+  nav.links a:hover::after {
+    width: 100%;
+  }
+
+  .header-social {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding-left: 16px;
+    border-left: 1px solid var(--line);
+  }
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--azul-deep);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .social-btn svg { width: 16px; height: 16px; fill: currentColor; }
+  .social-btn:hover {
+    background: var(--azul);
+    color: #ffffff;
+    border-color: var(--azul);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(28, 90, 115, 0.35);
+  }
+  .social-btn.whatsapp-btn:hover {
+    background: #25D366;
+    border-color: #25D366;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  }
+
+  .lang-switch {
+    display: flex;
+    gap: 2px;
+    background: var(--surface-alt);
+    padding: 3px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+  }
+  .lang-switch button {
+    background: none;
+    border: none;
+    color: var(--ink-soft);
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    letter-spacing: .03em;
+    transition: all 0.25s ease;
+  }
+  .lang-switch button.active {
+    background: var(--azul-deep);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(13, 45, 58, 0.25);
+  }
+  .lang-switch button:hover:not(.active) {
+    color: var(--azul);
+  }
+
+  #nav-toggle { display: none; }
+  .burger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--azul-deep);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 960px) {
+    .header-social { display: none; }
+  }
+
+  @media (max-width: 880px) {
+    nav.links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    nav.links a { padding: 14px 28px; width: 100%; border-top: 1px solid var(--line); }
+    nav.links a::after { display: none; }
+    #nav-toggle:checked ~ .header-actions nav.links { max-height: 420px; }
+    .burger { display: block; }
+  }
+
+  /* ---------- Hero Section (Compacto & Ajustado) ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--azul-deep);
+    color: #ffffff;
+    min-height: 310px;
+    display: flex;
+    align-items: center;
+  }
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    background-image: url('imagenes/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.62) contrast(1.1);
+    transition: transform 10s ease;
+  }
+  .hero:hover .hero-photo {
+    transform: scale(1.04);
+  }
+  .hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(13,45,58,0.65) 0%, rgba(13,45,58,0.92) 100%),
+                radial-gradient(circle at 75% 30%, rgba(56,189,248,0.18) 0%, transparent 65%);
+  }
+  .hero .wrap {
+    position: relative;
+    z-index: 2;
+    padding: 42px 28px 46px;
+    width: 100%;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--oro-soft);
+    margin-bottom: 22px;
+    letter-spacing: 0.04em;
+  }
+  .hero h1 {
+    font-size: clamp(2.3rem, 4.4vw, 3.5rem);
+    line-height: 1.12;
+    color: #ffffff;
+    max-width: 19ch;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    font-weight: 800;
+  }
+  .hero p.lead {
+    margin-top: 20px;
+    font-size: 1.12rem;
+    color: #E2EEF2;
+    max-width: 54ch;
+    line-height: 1.65;
+  }
+  .hero .cta-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- Glow Up Buttons ---------- */
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.96rem;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    text-decoration: none;
+    z-index: 1;
+  }
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transition: left 0.6s ease;
+    z-index: 2;
+  }
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  .btn.primary {
+    background: linear-gradient(135deg, var(--oro) 0%, #a88338 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(197, 160, 89, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .btn.primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 28px rgba(197, 160, 89, 0.6), 0 0 20px rgba(250, 204, 21, 0.4);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .btn.ghost {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+  .btn.ghost:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  /* ---------- Section Shell ---------- */
+  section { padding: 88px 0; position: relative; }
+  .section-head { max-width: 680px; margin-bottom: 50px; }
+  .section-head .eyebrow {
+    font-size: 0.82rem;
+    color: var(--oro);
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .section-head h2 { font-size: clamp(1.9rem, 3.2vw, 2.4rem); font-weight: 800; }
+  .section-head p { color: var(--ink-soft); margin-top: 14px; font-size: 1.06rem; }
+
+  /* ---------- Horarios (Site Cards) ---------- */
+  #horarios { background: var(--surface); }
+  .horarios-grid {
+    display: grid;
+    grid-template-columns: 0.92fr 1.16fr 0.92fr;
+    grid-template-areas: "injurias iglesia asilo";
+    gap: 28px;
+    align-items: stretch;
+  }
+  .site-card {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 30px 26px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  .site-card:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-4px);
+    border-color: rgba(28, 90, 115, 0.4);
+  }
+  .site-card.principal {
+    grid-area: iglesia;
+    background: #FFFFFF;
+    border-top: 4px solid var(--azul);
+    box-shadow: var(--shadow-md);
+  }
+  .site-card.principal:hover {
+    border-top-color: var(--oro);
+  }
+  .site-card:nth-of-type(2) { grid-area: injurias; }
+  .site-card:nth-of-type(3) { grid-area: asilo; }
+
+  .site-card .kicker {
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    color: var(--oro);
+    text-transform: uppercase;
+  }
+  .site-card h3 { font-size: 1.35rem; margin-top: 4px; font-weight: 800; }
+  .site-card address { font-style: normal; color: var(--ink-soft); font-size: 0.95rem; margin-top: 4px; }
+
+  table.horario { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.95rem; }
+  table.horario td { padding: 9px 0; border-top: 1px solid var(--line); vertical-align: top; }
+  table.horario td:first-child { color: var(--ink-soft); width: 56%; padding-right: 8px; }
+  table.horario td:last-child { font-weight: 700; text-align: right; color: var(--azul-deep); }
+
+  .map-frame {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    aspect-ratio: 4/3;
+    width: 100%;
+    transition: filter 0.3s ease;
+  }
+  .site-card:hover .map-frame {
+    border-color: var(--azul);
+  }
+  .map-frame img.map-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .card-links { display: flex; justify-content: flex-end; }
+  .card-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--azul);
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--azul-pale);
+    transition: all 0.3s ease;
+  }
+  .card-links a:hover {
+    background: var(--azul);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(28, 90, 115, 0.3);
+    text-decoration: none;
+  }
+
+  /* ---------- Exposición del Santísimo Sacramento Banner (Elegante Sin Foto) ---------- */
+  .santisimo-banner {
+    margin-top: 40px;
+    background: linear-gradient(135deg, var(--azul-deep) 0%, #154556 100%);
+    border: 1.5px solid var(--oro);
+    border-radius: var(--radius);
+    padding: 32px 38px;
+    box-shadow: 0 10px 30px rgba(13, 45, 58, 0.2), 0 0 20px rgba(197, 160, 89, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    color: #ffffff;
+    transition: all 0.35s ease;
+  }
+  .santisimo-banner:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(13, 45, 58, 0.3), 0 0 30px rgba(250, 204, 21, 0.4);
+  }
+  .santisimo-content { flex: 1; }
+  .santisimo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 14px;
+    background: var(--oro);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .santisimo-content h3 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .santisimo-content p {
+    color: #D2E4E8;
+    margin: 0;
+    font-size: 1.02rem;
+  }
+  .santisimo-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(250, 204, 21, 0.5);
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    color: var(--oro-glow);
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  .santisimo-time svg { fill: var(--oro-glow); width: 20px; height: 20px; }
+
+  .santisimo-thumb {
+    width: 120px;
+    height: 90px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1.5px solid var(--oro);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  }
+  .santisimo-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .santisimo-banner:hover .santisimo-thumb img {
+    transform: scale(1.08);
+  }
+
+  .horarios-note {
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+
+  /* ---------- Donativos Sección ---------- */
+  #donativos { background: var(--surface); border-top: 1px solid var(--line); }
+  .donativos-banner {
+    background: linear-gradient(135deg, #0F3847 0%, var(--azul-deep) 100%);
+    border: 1.5px solid var(--oro);
+    border-radius: var(--radius);
+    padding: 38px 42px;
+    box-shadow: 0 12px 36px rgba(13, 45, 58, 0.25), 0 0 24px rgba(197, 160, 89, 0.35);
+    color: #ffffff;
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .donativos-banner:hover {
+    box-shadow: 0 18px 48px rgba(13, 45, 58, 0.35), 0 0 35px rgba(250, 204, 21, 0.45);
+    transform: translateY(-3px);
+  }
+  .donativos-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 14px;
+    background: var(--oro);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+  .donativos-banner h2 {
+    color: #ffffff;
+    font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    font-weight: 800;
+    margin: 4px 0;
+  }
+  .donativos-banner p {
+    color: #D2E4E8;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 880px;
+  }
+  .donativos-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px dashed var(--oro);
+    border-radius: var(--radius-sm);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .donativos-box-label {
+    font-size: 0.88rem;
+    color: var(--oro-glow);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .donativos-iban {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: .04em;
+  }
+  .iban-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-copy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(197,160,89,0.6);
+    color: var(--oro-glow);
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    font-family: inherit;
+  }
+  .btn-copy svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+  .btn-copy:hover {
+    background: var(--oro);
+    border-color: var(--oro);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(197,160,89,0.4);
+  }
+  .btn-copy.copied {
+    background: #22c55e;
+    border-color: #22c55e;
+    color: #ffffff;
+  }
+
+  @media (max-width: 980px) {
+    .horarios-grid { grid-template-columns: 1fr; grid-template-areas: "iglesia" "injurias" "asilo"; }
+    .santisimo-banner { flex-direction: column; align-items: flex-start; }
+    .donativos-banner { padding: 28px 24px; }
+  }
+
+  /* ---------- Elementos especiales (Logos y Lema) ---------- */
+  .cofradia-badge-img {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    max-width: 56px;
+    max-height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2.5px solid var(--oro);
+    box-shadow: 0 3px 10px rgba(197, 160, 89, 0.3);
+    background: #FFFFFF;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+  .cofradia-badge-img.sagrado-corazon-img {
+    object-position: center 20%;
+  }
+  .cofradia-card:hover .cofradia-badge-img {
+    transform: scale(1.08);
+    border-color: var(--oro-glow);
+    box-shadow: 0 5px 16px rgba(197, 160, 89, 0.45);
+  }
+  .pastoral-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+  }
+  .alpha-logo-img {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+  }
+  .pastoral-icon.caritas-icon {
+    background: #FFFFFF;
+    border: 1.5px solid rgba(225, 29, 72, 0.25);
+    box-shadow: 0 2px 8px rgba(225, 29, 72, 0.12);
+    padding: 6px;
+  }
+  .pastoral-icon.itio-icon {
+    background: #FFFFFF;
+    border: 1.5px solid var(--line);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 4px;
+  }
+  .itio-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    display: block;
+  }
+  .caritas-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .parish-motto-slot {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--oro-glow);
+    font-weight: 600;
+    min-height: 24px;
+  }
+
+  /* ---------- Pastoral Section ---------- */
+  #pastoral {
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+  }
+  .pastoral-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .pastoral-card {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .pastoral-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--azul), var(--oro));
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  .pastoral-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: rgba(197, 160, 89, 0.6);
+  }
+  .pastoral-card.alpha-card::before {
+    background: var(--alpha-red);
+    opacity: 1;
+  }
+  .pastoral-card.alpha-card:hover {
+    border-color: var(--alpha-red);
+    box-shadow: 0 12px 32px rgba(225, 29, 72, 0.25);
+  }
+  
+  .pastoral-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    border: 1.5px solid var(--line);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    padding: 6px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .pastoral-card:hover .pastoral-icon {
+    background: #FFFFFF;
+    border-color: var(--oro);
+    box-shadow: 0 6px 18px rgba(197, 160, 89, 0.3);
+    transform: scale(1.08);
+  }
+  
+  .alpha-logo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--alpha-red);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  .pastoral-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    color: var(--azul-deep);
+  }
+  .pastoral-subtitle {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--oro);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .pastoral-card p {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin: 0 0 18px;
+    line-height: 1.55;
+  }
+  .pastoral-schedule {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface-alt);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--azul-deep);
+    border: 1px solid var(--line);
+    width: fit-content;
+  }
+  .pastoral-schedule svg { fill: var(--oro); width: 16px; height: 16px; }
+
+  .alpha-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--alpha-red);
+  }
+  .alpha-link:hover {
+    text-decoration: underline;
+    color: #B91C1C;
+  }
+
+  @media (max-width: 980px) {
+    .pastoral-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .pastoral-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Cofradías Section ---------- */
+  #cofradias {
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+  }
+  .cofradias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .cofradia-card {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  .cofradia-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--oro);
+    background: #FFFFFF;
+  }
+  .cofradia-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  .cofradia-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--azul), var(--oro));
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(13, 45, 58, 0.15);
+    flex-shrink: 0;
+  }
+  .cofradia-card h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--azul-deep);
+    margin-bottom: 2px;
+    line-height: 1.25;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+  }
+  .cofradia-sub {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--oro);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .cofradia-card p {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+    line-height: 1.55;
+  }
+  .cofradia-social {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .cofradia-social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--azul-deep);
+    transition: all 0.3s ease;
+  }
+  .cofradia-social a svg { width: 15px; height: 15px; fill: currentColor; }
+  .cofradia-social a:hover {
+    background: var(--azul);
+    color: #ffffff;
+    border-color: var(--azul);
+    box-shadow: 0 4px 12px rgba(28, 90, 115, 0.3);
+  }
+
+  @media (max-width: 980px) {
+    .cofradias-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .cofradias-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Historia ---------- */
+  #historia { background: var(--bg); }
+  .historia-block {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+    padding: 44px 0;
+  }
+  .historia-block + .historia-block { border-top: 1px solid var(--line); }
+  .historia-block:first-child { padding-top: 0; }
+  .historia-block h3 { font-size: 1.4rem; margin-bottom: 14px; color: var(--azul-deep); font-weight: 800; }
+  .historia-block p { margin: 0 0 14px; color: var(--ink-soft); font-size: 1.04rem; }
+  .historia-block p:last-child { margin-bottom: 0; }
+  .historia-block strong { color: var(--ink); font-weight: 700; }
+  .fuente { font-size: 0.88rem; color: var(--ink-soft); margin-top: 12px; font-style: italic; }
+
+  .historia-photo-wrap {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--line);
+    aspect-ratio: 4/3;
+    background: var(--surface-alt);
+    transition: all 0.35s ease;
+  }
+  .historia-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .historia-block:hover .historia-photo-wrap img {
+    transform: scale(1.05);
+  }
+  .historia-photo-wrap:hover {
+    box-shadow: var(--shadow-glow);
+    border-color: var(--oro);
+  }
+  figure { margin: 0; }
+  figcaption {
+    margin-top: 10px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .historia-block { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  /* ---------- Glow Up Sacerdotes (2 Priests) ---------- */
+  #sacerdotes { background: var(--surface); }
+  .priests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .priest-card {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    text-align: center;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .priest-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, var(--azul), var(--oro));
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .priest-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(13, 45, 58, 0.15), 0 0 24px rgba(197, 160, 89, 0.35);
+    border-color: rgba(197, 160, 89, 0.6);
+    background: #FFFFFF;
+  }
+  .priest-card:hover::before {
+    opacity: 1;
+  }
+
+  .priest-avatar-outer {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin-bottom: 22px;
+    padding: 5px;
+    background: linear-gradient(135deg, var(--azul), var(--oro));
+    box-shadow: 0 6px 18px rgba(13, 45, 58, 0.15);
+    transition: all 0.35s ease;
+  }
+  .priest-card:hover .priest-avatar-outer {
+    transform: scale(1.06);
+    box-shadow: 0 0 28px rgba(197, 160, 89, 0.6), 0 0 14px rgba(56, 189, 248, 0.4);
+  }
+  .priest-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #FFFFFF;
+    background: var(--surface-alt);
+  }
+
+  .priest-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+    color: var(--azul-deep);
+    font-weight: 800;
+  }
+  .priest-card .role {
+    display: inline-block;
+    color: var(--oro);
+    font-weight: 800;
+    font-size: 0.88rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--oro-soft);
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-top: 4px;
+    transition: all 0.3s ease;
+  }
+  .priest-card:hover .role {
+    background: var(--oro);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.4);
+  }
+
+  @media (max-width: 640px) {
+    .priests-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--azul-deep);
+    color: #EDE9DD;
+    padding: 64px 0 32px;
+    position: relative;
+  }
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--azul), var(--oro), var(--azul));
+  }
+  footer .wrap { display: grid; grid-template-columns: 1fr 0.9fr 1.1fr 1.3fr; gap: 36px; }
+  footer h3 { color: #ffffff; font-size: 1.1rem; margin-bottom: 16px; font-weight: 800; }
+  footer p, footer address { color: #BCCECF; font-style: normal; font-size: 0.95rem; line-height: 1.7; }
+  footer a { color: #EDE9DD; }
+  footer a:hover { color: var(--oro-soft); }
+
+  .obispado-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .obispado-contact-info strong {
+    color: var(--oro-glow);
+    font-weight: 700;
+  }
+  .obispado-contact-info a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.4);
+    transition: all 0.2s ease;
+  }
+  .obispado-contact-info a:hover {
+    color: var(--oro-glow);
+    text-decoration-color: var(--oro-glow);
+  }
+
+  .footer-social { display: flex; gap: 12px; margin-top: 18px; }
+  .footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.06);
+    color: #EDE9DD;
+    transition: all 0.3s ease;
+  }
+  .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+  .footer-social a:hover {
+    border-color: var(--oro);
+    background: var(--oro);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(197, 160, 89, 0.5);
+  }
+  .footer-social a.whatsapp-btn:hover {
+    background: #25D366;
+    border-color: #25D366;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.5);
+  }
+
+  .footer-bottom {
+    max-width: var(--max);
+    margin: 48px auto 0;
+    padding: 24px 28px 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.84rem;
+    color: #8CA4A8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  @media (max-width: 980px) {
+    footer .wrap { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+  @media (max-width: 640px) {
+    footer .wrap { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#inicio" class="brand">
+      <!-- Logo Cúpula Azul Mediterránea de Callosa d'en Sarrià -->
+      <svg class="brand-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" fill="url(#blueDomeBg)" stroke="#C5A059" stroke-width="1.5"/>
+        <rect x="12" y="32" width="24" height="4" rx="1" fill="#E5E7EB"/>
+        <rect x="14" y="30" width="20" height="2" fill="#C5A059"/>
+        <path d="M14 30C14 19 34 19 34 30Z" fill="url(#domeGradient)"/>
+        <path d="M24 19.5V30" stroke="#FACC15" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M19 22C21 24 22 27 22 30" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/>
+        <path d="M29 22C27 24 26 27 26 30" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/>
+        <rect x="22" y="14" width="4" height="6" fill="#F8FAFC"/>
+        <path d="M24 8V14M21.5 10.5H26.5" stroke="#FACC15" stroke-width="1.8" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="blueDomeBg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0D2D3A"/>
+            <stop stop-color="#1C5A73"/>
+          </linearGradient>
+          <linearGradient id="domeGradient" x1="14" y1="19.5" x2="34" y2="30" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0284C7"/>
+            <stop stop-color="#1E3A8A"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="brand-text">
+        Sant Joan Baptista
+        <small>Callosa d'en Sarrià</small>
+      </div>
+    </a>
+
+    <input type="checkbox" id="nav-toggle">
+    <label class="burger" for="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </label>
+
+    <div class="header-actions">
+      <nav class="links">
+        <a href="#horarios" data-i18n="nav-horarios">Horarios</a>
+        <a href="#pastoral" data-i18n="nav-pastoral">Pastoral</a>
+        <a href="#cofradias" data-i18n="nav-cofradias">Cofradías</a>
+        <a href="#donativos" data-i18n="nav-donativos">Donativos</a>
+        <a href="historia.html" data-i18n="nav-historia">Historia</a>
+        <a href="#sacerdotes" data-i18n="nav-sacerdotes">Sacerdotes</a>
+        <a href="#contacto" data-i18n="nav-contacto">Contacto</a>
+      </nav>
+
+      <div class="header-social">
+        <a href="https://www.instagram.com/parroquia_callosa_den_sarria/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/p/Parroquia-San-Juan-Bautista-Callosa-den-Sarri%C3%A0-100067966658353/" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        </a>
+        <a href="https://chat.whatsapp.com/4XPGUFaeKGC9qEePxVf1zh?s=sh&p=a&mlu=4&ilr=4" class="social-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Grupo de WhatsApp Parroquia" title="Grupo de WhatsApp de la Parroquia">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <button type="button" data-lang="es" class="active">ES</button>
+        <button type="button" data-lang="va">VAL</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-photo"></div>
+  <div class="wrap">
+    <h1 data-i18n="hero-title">Parroquia San Juan Bautista</h1>
+    <div class="parish-motto-slot" id="lema-parroquia" data-i18n="hero-motto"></div>
+    <p class="lead" data-i18n="hero-lead">Consulta los horarios de misa, pastoral, grupos de formación y cómo llegar a cada templo.</p>
+    <div class="cta-row">
+      <a href="#horarios" class="btn primary" data-i18n="hero-btn-1">Horarios de misa</a>
+      <a href="#pastoral" class="btn ghost" data-i18n="hero-btn-pastoral">Pastoral Parroquial</a>
+    </div>
+  </div>
+</section>
+
+<section id="horarios">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="horarios-eyebrow">Horarios de culto</div>
+      <h2 data-i18n="horarios-title">Iglesia y capillas</h2>
+    </div>
+
+    <div class="horarios-grid">
+
+      <!-- IGLESIA PRINCIPAL -->
+      <article class="site-card principal">
+        <div>
+          <div class="kicker" data-i18n="kicker-sede">Sede parroquial</div>
+          <h3 data-i18n="titulo-iglesia">Iglesia San Juan Bautista</h3>
+          <address>Plaça d'Espanya, 10 · 03510 Callosa d'en Sarrià</address>
+        </div>
+        <table class="horario">
+          <tr><td data-i18n="lbl-sabados">Sábados y vísperas</td><td>19:30 h</td></tr>
+          <tr><td data-i18n="lbl-domingos">Domingos y festivos</td><td>11:00 h y 19:30 h</td></tr>
+        </table>
+        <div class="map-frame">
+          <img src="imagenes/fachada.jpg" alt="Fachada de la Iglesia San Juan Bautista" class="map-img" />
+        </div>
+        <div class="card-links">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=38.6513581,-0.1221180" target="_blank" rel="noopener" data-i18n="lnk-llegar">Cómo llegar →</a>
+        </div>
+      </article>
+
+      <!-- CAPILLA INJURIAS -->
+      <article class="site-card">
+        <div>
+          <div class="kicker" data-i18n="kicker-capilla">Capilla</div>
+          <h3>Virgen de las Injurias</h3>
+          <address>Carrer Verge de les Injúries, s/n · 03510 Callosa d'en Sarrià</address>
+        </div>
+        <table class="horario">
+          <tr><td data-i18n="lbl-injurias-dias1">Lunes, miércoles y jueves</td><td>19:30 h</td></tr>
+          <tr><td data-i18n="lbl-injurias-dias2">Martes y viernes</td><td>09:30 h</td></tr>
+        </table>
+        <div class="map-frame">
+          <img src="imagenes/capilla_virgeninjurias.webp" alt="Capilla Virgen de las Injurias" class="map-img" />
+        </div>
+        <div class="card-links">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=38.6511729,-0.1230130" target="_blank" rel="noopener" data-i18n="lnk-llegar">Cómo llegar →</a>
+        </div>
+      </article>
+
+      <!-- CAPILLA ASILO -->
+      <article class="site-card">
+        <div>
+          <div class="kicker" data-i18n="kicker-capilla">Capilla</div>
+          <h3 data-i18n="titulo-asilo">Capilla del Asilo</h3>
+          <address>Carrer Ausiàs March, 5 · 03510 Callosa d'en Sarrià</address>
+        </div>
+        <table class="horario">
+          <tr><td data-i18n="lbl-entresemana">Entre semana</td><td>10:00 h</td></tr>
+        </table>
+        <div class="map-frame">
+          <img src="imagenes/capilla_asilo.jpg" alt="Capilla del Asilo" class="map-img" />
+        </div>
+        <div class="card-links">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=38.6542648,-0.1204966" target="_blank" rel="noopener" data-i18n="lnk-llegar">Cómo llegar →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- EXPOSICIÓN DEL SANTÍSIMO SACRAMENTO BANNER CON FOTO REAL AJUSTADA -->
+    <div class="santisimo-banner">
+      <div class="santisimo-thumb">
+        <img src="imagenes/adoracion_eucaristica.jpg" alt="Exposición del Santísimo Sacramento en la Capilla de la Virgen de las Injurias">
+      </div>
+      <div class="santisimo-content">
+        <div class="santisimo-badge" data-i18n="santisimo-badge">Culto Eucarístico</div>
+        <h3 data-i18n="santisimo-title">Exposición del Santísimo Sacramento</h3>
+        <p data-i18n="santisimo-desc">Momento de oración silenciosa, adoración eucarística y bendición. Se realiza en la Capilla de la Virgen de las Injurias.</p>
+      </div>
+      <div class="santisimo-time">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+        <span data-i18n="santisimo-horario">Capilla Virgen de las Injurias · Jueves 09:30 h</span>
+      </div>
+    </div>
+
+    <p class="horarios-note" data-i18n="horarios-note">Horario habitual de las tres sedes, salvo modificaciones por fiestas patronales, Semana Santa o cualquier otro motivo puntual.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN PASTORAL PARROQUIAL -->
+<section id="pastoral">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="pastoral-eyebrow">Vida Parroquial</div>
+      <h2 data-i18n="pastoral-title">Pastoral</h2>
+      <p data-i18n="pastoral-sub">Grupos de catequesis, formación, vida comunitaria y acompañamiento en la fe para niños, jóvenes y adultos.</p>
+    </div>
+
+    <div class="pastoral-grid">
+      
+      <!-- CATEQUESIS 1º COMUNIÓN -->
+      <article class="pastoral-card">
+        <div>
+          <div class="pastoral-icon">
+            <img src="imagenes/logo_comunion1.jpg" alt="Logo Catequesis 1º Comunión" class="pastoral-logo-img">
+          </div>
+          <h3 data-i18n="cat-1-title">Catequesis 1º Comunión</h3>
+          <div class="pastoral-subtitle" data-i18n="cat-1-sub">Iniciación Sacramental</div>
+          <p data-i18n="cat-1-desc">Primer curso de preparación para recibir por primera vez el Sacramento de la Eucaristía.</p>
+        </div>
+        <div class="pastoral-schedule">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 13H11V7h1.5v6l4.2 2.5-.8 1.23-4.9-2.93z"/></svg>
+          <span data-i18n="cat-1-time">Martes de 17:30 a 18:30 h</span>
+        </div>
+      </article>
+
+      <!-- CATEQUESIS 2º Y 3º COMUNIÓN -->
+      <article class="pastoral-card">
+        <div>
+          <div class="pastoral-icon">
+            <img src="imagenes/logo_comunion23.jpg" alt="Logo Catequesis 2º y 3º Comunión" class="pastoral-logo-img">
+          </div>
+          <h3 data-i18n="cat-23-title">Catequesis 2º y 3º Comunión</h3>
+          <div class="pastoral-subtitle" data-i18n="cat-23-sub">Formación Sacramental</div>
+          <p data-i18n="cat-23-desc">Continuación del camino catequético y profundización sacramental para 2º y 3º curso.</p>
+        </div>
+        <div class="pastoral-schedule">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 13H11V7h1.5v6l4.2 2.5-.8 1.23-4.9-2.93z"/></svg>
+          <span data-i18n="cat-23-time">Miércoles de 17:30 a 18:30 h</span>
+        </div>
+      </article>
+
+      <!-- CATEQUESIS CONFIRMACIÓN JÓVENES -->
+      <article class="pastoral-card">
+        <div>
+          <div class="pastoral-icon">
+            <img src="imagenes/logo_confirmacion.jpg" alt="Logo Catequesis de Confirmación" class="pastoral-logo-img">
+          </div>
+          <h3 data-i18n="cat-conf-title">Catequesis de Confirmación</h3>
+          <div class="pastoral-subtitle" data-i18n="cat-conf-sub">Jóvenes</div>
+          <p data-i18n="cat-conf-desc">Formación de jóvenes para la reafirmación de la fe y recepción del don del Espíritu Santo.</p>
+        </div>
+        <div class="pastoral-schedule">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 13H11V7h1.5v6l4.2 2.5-.8 1.23-4.9-2.93z"/></svg>
+          <span data-i18n="cat-conf-time">Viernes a las 20:00 h</span>
+        </div>
+      </article>
+
+      <!-- GRUPOS ITIO (Formación Poscomunión) -->
+      <article class="pastoral-card">
+        <div>
+          <div class="pastoral-icon itio-icon">
+            <img src="imagenes/Logo-ITIO.jpg" alt="Logo Grupos ITIO" class="itio-logo-img">
+          </div>
+          <h3 data-i18n="cat-itio-title">Grupos ITIO</h3>
+          <div class="pastoral-subtitle" data-i18n="cat-itio-sub">Formación Poscomunión</div>
+          <p data-i18n="cat-itio-desc">Grupo de formación y acompañamiento continuo en la fe tras recibir la Primera Comunión para niños y adolescentes.</p>
+        </div>
+        <div class="pastoral-schedule">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 13H11V7h1.5v6l4.2 2.5-.8 1.23-4.9-2.93z"/></svg>
+          <span data-i18n="cat-itio-time">Viernes a las 18:30 h</span>
+        </div>
+      </article>
+
+      <!-- CURSO ALPHA (Independiente) -->
+      <article class="pastoral-card alpha-card">
+        <div>
+          <div class="alpha-logo-badge">
+            <img src="imagenes/alpha_logo.png" alt="Logo Alpha España" class="alpha-logo-img">
+            Alpha España
+          </div>
+          <h3 data-i18n="cat-alpha-title">Curso Alpha</h3>
+          <div class="pastoral-subtitle" data-i18n="cat-alpha-sub">Explorando la fe y la vida</div>
+          <p data-i18n="cat-alpha-desc" data-i18n-html="1">Alpha es una oportunidad para explorar la fe cristiana en un ambiente relajado, cercano y abierto. Cada sesión incluye una merienda, una charla y un tiempo de conversación donde compartir libremente. <strong>Empezará el 6 de noviembre.</strong></p>
+        </div>
+        <div>
+          <div class="pastoral-schedule" style="background: rgba(225,29,72,0.1); border-color: rgba(225,29,72,0.3); color: var(--alpha-red);">
+            <svg viewBox="0 0 24 24" style="fill: var(--alpha-red);"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+            <span data-i18n-html="1"><strong>Inicio: 6 de noviembre</strong></span>
+          </div>
+          <div>
+            <a href="https://spain.alpha.org/" target="_blank" rel="noopener" class="alpha-link" data-i18n="cat-alpha-link">
+              Web Oficial de Alpha España →
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PASTORAL DE ADULTOS -->
+      <article class="pastoral-card">
+        <div>
+          <div class="pastoral-icon">
+            <img src="imagenes/logo_adultos.jpg" alt="Logo Pastoral de Adultos" class="pastoral-logo-img">
+          </div>
+          <h3 data-i18n="cat-adultos-title">Pastoral de adultos</h3>
+          <div class="pastoral-subtitle" data-i18n="cat-adultos-sub">Catequesis de confirmación de adultos</div>
+          <p data-i18n="cat-adultos-desc">Con aquellos adultos que se quieran confirmar (horario a convenir), se realizará un curso de formación para recibir el sacramento de la confirmación.</p>
+        </div>
+        <div class="pastoral-schedule">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 13H11V7h1.5v6l4.2 2.5-.8 1.23-4.9-2.93z"/></svg>
+          <span data-i18n="cat-adultos-time">Horario a convenir</span>
+        </div>
+      </article>
+
+      <!-- EQUIPOS DE VIDA -->
+      <article class="pastoral-card">
+        <div>
+          <div class="pastoral-icon">
+            <img src="imagenes/logo_equipos_vida.jpg" alt="Logo Equipos de Vida" class="pastoral-logo-img">
+          </div>
+          <h3 data-i18n="cat-vida-title">Equipos de vida</h3>
+          <div class="pastoral-subtitle" data-i18n="cat-vida-sub">Formarse, vivir y compartir la fe</div>
+          <p data-i18n="cat-vida-desc">Dirigido a aquellos adultos que quieren formarse, vivir y compartir la fe. Se formarán equipos de vida (horario a convenir), donde podamos compartir la fe y crear un espacio de amistad y fraternidad.</p>
+        </div>
+        <div class="pastoral-schedule">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 13H11V7h1.5v6l4.2 2.5-.8 1.23-4.9-2.93z"/></svg>
+          <span data-i18n="cat-vida-time">Horario a convenir</span>
+        </div>
+      </article>
+
+      <!-- CÁRITAS PARROQUIAL -->
+      <article class="pastoral-card">
+        <div>
+          <div class="pastoral-icon caritas-icon">
+            <img src="imagenes/caritas_logo.png" alt="Logo Cáritas" class="caritas-logo-img">
+          </div>
+          <h3 data-i18n="cat-caritas-title">Cáritas Parroquial</h3>
+          <div class="pastoral-subtitle" data-i18n="cat-caritas-sub">Acción Social y Caridad</div>
+          <p data-i18n="cat-caritas-desc">Servicio de acogida, atención social, ayuda a las familias necesitadas y promoción de la caridad y solidaridad en la comunidad de Callosa d'en Sarrià.</p>
+        </div>
+        <div class="pastoral-schedule">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 13H11V7h1.5v6l4.2 2.5-.8 1.23-4.9-2.93z"/></svg>
+          <span data-i18n="cat-caritas-time">A las 18:30 h</span>
+        </div>
+      </article>
+
+      <!-- VISITADORES DE ENFERMOS -->
+      <article class="pastoral-card">
+        <div>
+          <div class="pastoral-icon">
+            <img src="imagenes/logo_enfermos.svg" alt="Logo Visitadores de Enfermos" class="pastoral-logo-img">
+          </div>
+          <h3 data-i18n="cat-enfermos-title">Visitadores de enfermos</h3>
+          <div class="pastoral-subtitle" data-i18n="cat-enfermos-sub">Pastoral de la Salud y Atención en Hogares</div>
+          <p data-i18n="cat-enfermos-desc">Todas las semanas hay un equipo de personas que llevan la comunión a aquellos que no pueden salir de sus casas. Si usted quiere recibir la comunión, puede comunicarlo en la parroquia y con mucho gusto nos acercaremos a llevarle la comunión.</p>
+        </div>
+        <div class="pastoral-schedule">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 13H11V7h1.5v6l4.2 2.5-.8 1.23-4.9-2.93z"/></svg>
+          <span data-i18n="cat-enfermos-time">Atención semanal</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN COFRADÍAS -->
+<section id="cofradias">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="cofradias-eyebrow">Devoción Popular</div>
+      <h2 data-i18n="cofradias-title">Cofradías Parroquiales</h2>
+      <p data-i18n="cofradias-sub">Hermandades y cofradías de gran tradición y devoción popular vinculadas a la vida parroquial de Callosa d'en Sarrià.</p>
+    </div>
+
+    <div class="cofradias-grid">
+      
+      <!-- COFRADÍA MARE DE DÉU DE LES INJÚRIES -->
+      <article class="cofradia-card">
+        <div>
+          <div class="cofradia-header">
+            <img src="imagenes/logo virgen injurias.jpg" alt="Logo Cofradía Mare de Déu de les Injúries" class="cofradia-badge-img">
+            <div>
+              <h3>Mare de Déu de les Injúries</h3>
+              <div class="cofradia-sub">Cofradía Parroquial</div>
+            </div>
+          </div>
+          <p data-i18n="cof-injuries-desc">Cofradía dedicada a la veneración y custodia del culto a la Mare de Déu de les Injúries, foco de profunda devoción popular en su capilla y barrio histórico.</p>
+        </div>
+        <div class="cofradia-social">
+          <a href="https://www.facebook.com/profile.php?id=100069547698315" target="_blank" rel="noopener" aria-label="Facebook Cofradía Virgen de las Injurias">
+            <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/virgendelasinjurias/" target="_blank" rel="noopener" aria-label="Instagram Cofradía Virgen de las Injurias">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+        </div>
+      </article>
+
+      <!-- COFRADÍA VIRGEN DEL CISNE -->
+      <article class="cofradia-card">
+        <div>
+          <div class="cofradia-header">
+            <img src="imagenes/virgen del cisne logo.jpg" alt="Logo Cofradía Virgen del Cisne" class="cofradia-badge-img virgen-cisne-img">
+            <div>
+              <h3>Virgen del Cisne</h3>
+              <div class="cofradia-sub">Cofradía Parroquial</div>
+            </div>
+          </div>
+          <p data-i18n="cof-cisne-desc">Cofradía dedicada a la advocación y festividad de la Virgen del Cisne, promoviendo la fraternidad, la vida comunitaria y la fe viva en Callosa d'en Sarrià.</p>
+        </div>
+      </article>
+
+      <!-- COFRADÍA SAGRADO CORAZÓN DE JESÚS -->
+      <article class="cofradia-card">
+        <div>
+          <div class="cofradia-header">
+            <img src="imagenes/logo_sagrado_corazon.jpg" alt="Logo Cofradía Sagrado Corazón de Jesús" class="cofradia-badge-img sagrado-corazon-img">
+            <div>
+              <h3>Sagrado Corazón de Jesús</h3>
+              <div class="cofradia-sub">Cofradía Parroquial</div>
+            </div>
+          </div>
+          <p data-i18n="cof-corazon-desc">Cofradía dedicada a la devoción, culto y espiritualidad del Sagrado Corazón de Jesús en la parroquia San Juan Bautista de Callosa d'en Sarrià.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="sacerdotes">
+  <div class="wrap">
+    <div class="section-head" style="text-align: center; margin: 0 auto 52px;">
+      <div class="eyebrow" data-i18n="sac-eyebrow">Nuestros pastores</div>
+      <h2 data-i18n="sac-title">Sacerdotes de la parroquia</h2>
+      <p data-i18n="sac-sub">Al servicio espiritual y pastoral de Callosa d'en Sarrià.</p>
+    </div>
+    
+    <div class="priests-grid">
+      <!-- PARROCO -->
+      <article class="priest-card">
+        <div class="priest-avatar-outer">
+          <img src="imagenes/pepe.jpg" alt="D. José — Párroco" class="priest-photo">
+        </div>
+        <h3>D. José</h3>
+        <div class="role" data-i18n="sac-rol-1">Párroco</div>
+      </article>
+
+      <!-- VICARIO -->
+      <article class="priest-card">
+        <div class="priest-avatar-outer">
+          <img src="imagenes/kamil.jpg" alt="D. Kamil — Vicario parroquial" class="priest-photo">
+        </div>
+        <h3>D. Kamil</h3>
+        <div class="role" data-i18n="sac-rol-2">Vicario parroquial</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN DONATIVOS Y RESTAURACIÓN -->
+<section id="donativos">
+  <div class="wrap">
+    <div class="donativos-banner">
+      <div class="donativos-badge" data-i18n="don-badge">Colaboración Parroquial</div>
+      <h2 data-i18n="don-title">Donativos y Restauración</h2>
+      <p data-i18n="don-desc">Tu colaboración ayuda a mantener viva nuestra iglesia y a financiar los trabajos de restauración, conservación del templo parroquial e historia de Callosa d'en Sarrià, así como el sostenimiento de la acción pastoral.</p>
+      <div class="donativos-box">
+        <div>
+          <div class="donativos-box-label" data-i18n="don-account-lbl">Número de cuenta de la Parroquia (Restauración)</div>
+          <div class="iban-row">
+            <span class="donativos-iban" id="iban-text">ES59 3105 2636 1628 1000 8790</span>
+            <button class="btn-copy" id="btn-copy-iban" onclick="copyIban()" title="Copiar número de cuenta">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+              </svg>
+              <span id="copy-label">Copiar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div>
+      <h3>Parròquia Sant Joan Baptista</h3>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/parroquia_callosa_den_sarria/" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/p/Parroquia-San-Juan-Bautista-Callosa-den-Sarri%C3%A0-100067966658353/" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        </a>
+        <a href="https://chat.whatsapp.com/4XPGUFaeKGC9qEePxVf1zh?s=sh&p=a&mlu=4&ilr=4" class="social-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Grupo de WhatsApp Parroquia" title="Grupo de WhatsApp de la Parroquia">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+      <p style="margin-top:14px;"><a href="politica.html" style="color:#BCCECF;font-size:0.88rem;text-decoration:underline;text-underline-offset:3px;">Política de privacidad y cookies</a></p>
+    </div>
+    <div>
+      <h3 data-i18n="foot-despacho">Despacho parroquial</h3>
+      <address>Plaça del Convent, 1<br>03510 Callosa d'en Sarrià<br>Alicante</address>
+    </div>
+    <div>
+      <h3 data-i18n="nav-contacto">Contacto Parroquia</h3>
+      <address><a href="mailto:parroquiacallosadensarria@gmail.com">parroquiacallosadensarria@gmail.com</a></address>
+    </div>
+    <div>
+      <h3 data-i18n="foot-obispado">Obispado Orihuela-Alicante</h3>
+      <address class="obispado-contact-info">
+        <div><strong>Teléfono:</strong> <a href="tel:965204822">965 20 48 22</a> - <a href="tel:965204909">965 204 909</a></div>
+        <div><strong>Correo electrónico:</strong><br><a href="mailto:informacion@diocesisoa.org">informacion@diocesisoa.org</a><br><a href="mailto:obispado@diocesisoa.org">obispado@diocesisoa.org</a></div>
+        <div><strong>Dirección:</strong> Calle Marco Oliver, 5, 03009 Alicante</div>
+        <div><strong>Web oficial:</strong> <a href="https://diocesisoa.org/" target="_blank" rel="noopener">diocesisoa.org →</a></div>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Parròquia Sant Joan Baptista — Callosa d'en Sarrià</span>
+    <span>Diócesis de Orihuela-Alicante</span>
+  </div>
+</footer>
+
+<script>
+function copyIban() {
+  const iban = document.getElementById('iban-text').textContent.trim();
+  const btn = document.getElementById('btn-copy-iban');
+  const label = document.getElementById('copy-label');
+  navigator.clipboard.writeText(iban).then(() => {
+    btn.classList.add('copied');
+    label.textContent = '¡Copiado!';
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      label.textContent = 'Copiar';
+    }, 2200);
+  }).catch(() => {
+    // Fallback for older browsers
+    const ta = document.createElement('textarea');
+    ta.value = iban;
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.classList.add('copied');
+    label.textContent = '¡Copiado!';
+    setTimeout(() => { btn.classList.remove('copied'); label.textContent = 'Copiar'; }, 2200);
+  });
+}
+</script>
+
+<script>
+const i18n = {
+
+  es: {
+    "nav-horarios":"Horarios","nav-pastoral":"Pastoral","nav-cofradias":"Cofradías","nav-historia":"Historia","nav-sacerdotes":"Sacerdotes","nav-contacto":"Contacto",
+    "hero-badge":"Iglesia Arciprestal · Desde 1578",
+    "hero-title":"Parroquia San Juan Bautista",
+    "hero-lead":"Consulta los horarios de misa, pastoral, grupos de formación y cómo llegar a cada templo.",
+    "hero-btn-1":"Horarios de misa","hero-btn-pastoral":"Pastoral Parroquial",
+    "horarios-eyebrow":"Horarios de culto","horarios-title":"Iglesia y capillas",
+    "kicker-sede":"Sede parroquial","kicker-capilla":"Capilla",
+    "titulo-iglesia":"Iglesia San Juan Bautista","titulo-asilo":"Capilla del Asilo",
+    "lbl-sabados":"Sábados y vísperas","lbl-domingos":"Domingos y festivos","lbl-entresemana":"Entre semana",
+    "lbl-injurias-dias1":"Lunes, miércoles y jueves","lbl-injurias-dias2":"Martes y viernes",
+    "lnk-llegar":"Cómo llegar →",
+    "santisimo-badge":"Culto Eucarístico",
+    "santisimo-title":"Exposición del Santísimo Sacramento",
+    "santisimo-desc":"Momento de oración silenciosa, adoración eucarística y bendición. Se realiza en la Capilla de la Virgen de las Injurias.",
+    "santisimo-horario":"Capilla Virgen de las Injurias · Jueves 09:30 h",
+    "horarios-note":"Horario habitual de las tres sedes, salvo modificaciones por fiestas patronales, Semana Santa o cualquier otro motivo puntual.",
+    "pastoral-eyebrow":"Vida Parroquial","pastoral-title":"Pastoral",
+    "pastoral-sub":"Grupos de catequesis, formación, vida comunitaria y acompañamiento en la fe para niños, jóvenes y adultos.",
+    "cat-1-title":"Catequesis 1º Comunión","cat-1-sub":"Iniciación Sacramental","cat-1-desc":"Primer curso de preparación para recibir por primera vez el Sacramento de la Eucaristía.",
+    "cat-1-time":"Martes de 17:30 a 18:30 h",
+    "cat-23-title":"Catequesis 2º y 3º Comunión","cat-23-sub":"Formación Sacramental","cat-23-desc":"Continuación del camino catequético y profundización sacramental para 2º y 3º curso.",
+    "cat-23-time":"Miércoles de 17:30 a 18:30 h",
+    "cat-conf-title":"Catequesis de Confirmación","cat-conf-sub":"Jóvenes","cat-conf-desc":"Formación de jóvenes para la reafirmación de la fe y recepción del don del Espíritu Santo.",
+    "cat-conf-time":"Viernes a las 20:00 h",
+    "cat-itio-title":"Grupos ITIO","cat-itio-sub":"Formación Poscomunión","cat-itio-desc":"Grupo de formación y acompañamiento continuo en la fe tras recibir la Primera Comunión para niños y adolescentes.",
+    "cat-itio-time":"Viernes a las 18:30 h",
+    "cat-alpha-title":"Curso Alpha","cat-alpha-sub":"Explorando la fe y la vida","cat-alpha-desc":"Alpha es una oportunidad para explorar la fe cristiana en un ambiente relajado, cercano y abierto. Cada sesión incluye una merienda, una charla y un tiempo de conversación donde compartir libremente. <strong>Empezará el 6 de noviembre.</strong>",
+    "cat-alpha-time":"Inicio: 6 de noviembre","cat-alpha-link":"Web Oficial de Alpha España →",
+    "cat-adultos-title":"Pastoral de adultos","cat-adultos-sub":"Catequesis de confirmación de adultos","cat-adultos-desc":"Con aquellos adultos que se quieran confirmar (horario a convenir), se realizará un curso de formación para recibir el sacramento de la confirmación.",
+    "cat-adultos-time":"Horario a convenir",
+    "cat-vida-title":"Equipos de vida","cat-vida-sub":"Formarse, vivir y compartir la fe","cat-vida-desc":"Dirigido a aquellos adultos que quieren formarse, vivir y compartir la fe. Se formarán equipos de vida (horario a convenir), donde podamos compartir la fe y crear un espacio de amistad y fraternidad.",
+    "cat-vida-time":"Horario a convenir",
+    "cat-enfermos-title":"Visitadores de enfermos","cat-enfermos-sub":"Pastoral de la Salud y Atención en Hogares","cat-enfermos-desc":"Todas las semanas hay un equipo de personas que llevan la comunión a aquellos que no pueden salir de sus casas. Si usted quiere recibir la comunión, puede comunicarlo en la parroquia y con mucho gusto nos acercaremos a llevarle la comunión.",
+    "cat-enfermos-time":"Atención semanal",
+    "cat-caritas-title":"Cáritas Parroquial","cat-caritas-sub":"Acción Social y Caridad","cat-caritas-desc":"Servicio de acogida, atención social, ayuda a las familias necesitadas y promoción de la caridad y solidaridad en Callosa d'en Sarrià.",
+    "cat-caritas-time":"A las 18:30 h",
+    "nav-donativos":"Donativos",
+    "don-badge":"Colaboración Parroquial",
+    "don-title":"Donativos y Restauración",
+    "don-desc":"Tu colaboración ayuda a mantener viva nuestra iglesia y a financiar los trabajos de restauración, conservación del templo parroquial e historia de Callosa d'en Sarrià, así como el sostenimiento de la acción pastoral.",
+    "don-account-lbl":"Número de cuenta de la Parroquia (Restauración)",
+    "don-account-val":"Cuenta de la Parroquia para la Restauración del Templo",
+    "cofradias-eyebrow":"Devoción Popular","cofradias-title":"Cofradías Parroquiales",
+    "cofradias-sub":"Hermandades y cofradías de gran tradición y devoción popular vinculadas a la vida parroquial de Callosa d'en Sarrià.",
+    "cof-injuries-desc":"Cofradía dedicada a la veneración y custodia del culto a la Mare de Déu de les Injúries, foco de profunda devoción popular en su capilla y barrio histórico.",
+    "cof-cisne-desc":"Cofradía dedicada a la advocación y festividad de la Virgen del Cisne, promoviendo la fraternidad, la vida comunitaria y la fe viva en Callosa d'en Sarrià.",
+    "cof-corazon-desc":"Cofradía dedicada a la devoción, culto y espiritualidad del Sagrado Corazón de Jesús en la parroquia San Juan Bautista de Callosa d'en Sarrià.",
+    "historia-eyebrow":"Patrimonio e Historia","historia-title":"Historia de la parroquia",
+    "h-iglesia-h":"Iglesia San Juan Bautista",
+    "h-iglesia-p1":"La primera noticia de la iglesia actual es de <strong>1574</strong>; en <strong>1578</strong> Francisco de Mesa la inauguró como parroquia de Callosa. El crucero se construyó entre 1765 y 1786, y la fachada de mármol de canteras locales se levantó entre 1819 y 1865; el cuerpo superior, ya en cemento imitando mármol, se añadió en 1917.",
+    "h-iglesia-p2":"El templo, de transición entre el barroco y el neoclásico, conserva un <strong>órgano barroco de 1754</strong> traído de un convento de Cocentaina en 1845, y una cúpula de tejas azules que se ve desde buena parte del valle.",
+    "h-fuente":"El cronista local <strong>Adolfo Salvá Ballester</strong> documentó buena parte de esta historia en su monografía <em>La Villa de Callosa de Ensarriá</em> (1960) y en su manuscrito sobre las visitas pastorales a la parroquia entre 1633 y 1807.",
+    "cap-fachada":"Fachada principal de mármol, Plaça d'Espanya",
+    "h-injurias-p1":"Conservado celosamente en el coro de la iglesia, este histórico órgano barroco traído en 1845 desde Cocentaina representa una de las joyas del patrimonio musical y litúrgico de Callosa d'en Sarrià.",
+    "cap-injurias":"Órgano barroco histórico de 1754",
+    "h-asilo-p1":"Espacio de culto y oración con sus imponentes bóvedas y pilastras de transición barroco-neoclásica que cobijan la vida espiritual del pueblo de Callosa.",
+    "cap-asilo":"Interior de la nave principal del templo",
+    "sac-eyebrow":"Nuestros pastores","sac-title":"Sacerdotes de la parroquia","sac-sub":"Al servicio espiritual y pastoral de Callosa d'en Sarrià.",
+    "sac-rol-1":"Párroco",
+    "sac-rol-2":"Vicario parroquial",
+    "foot-despacho":"Despacho parroquial"
+  },
+  va: {
+    "nav-horarios":"Horaris","nav-pastoral":"Pastoral","nav-cofradias":"Confraries","nav-historia":"Història","nav-sacerdotes":"Sacerdots","nav-contacto":"Contacte",
+    "hero-badge":"Església Arxiprestal · Des de 1578",
+    "hero-title":"Parròquia Sant Joan Baptista",
+    "hero-lead":"Consulta els horaris de missa, pastoral, grups de formació i com arribar a cada temple.",
+    "hero-btn-1":"Horaris de missa","hero-btn-pastoral":"Pastoral Parroquia",
+    "horarios-eyebrow":"Horaris de culte","horarios-title":"Església i capelles",
+    "kicker-sede":"Seu parroquial","kicker-capilla":"Capella",
+    "titulo-iglesia":"Església Sant Joan Baptista","titulo-asilo":"Capella de l'Asil",
+    "lbl-sabados":"Dissabtes i vespres","lbl-domingos":"Diumenges i festius","lbl-entresemana":"Entre setmana",
+    "lbl-injurias-dias1":"Dilluns, dimecres i dijous","lbl-injurias-dias2":"Dimarts i divendres",
+    "lnk-llegar":"Com arribar →",
+    "santisimo-badge":"Culte Eucarístic",
+    "santisimo-title":"Exposició del Santíssim Sagrament",
+    "santisimo-desc":"Moment d'oració silenciosa, adoració eucarística i benedicció. Es realitza a la Capella de la Verge de les Injúries.",
+    "santisimo-horario":"Capella Verge de les Injúries · Dijous 09:30 h",
+    "horarios-note":"Horari habitual de les tres seus, llevat de modificacions per festes patronals, Setmana Santa o qualsevol altre motiu puntual.",
+    "pastoral-eyebrow":"Vida Parroquia","pastoral-title":"Pastoral",
+    "pastoral-sub":"Grups de catequesi, formació, vida comunitària i acompanyament en la fe per a xiquets, joves i adults.",
+    "cat-1-title":"Catequesi 1er Comunió","cat-1-sub":"Iniciació Sacramental","cat-1-desc":"Primer curs de preparació per a rebre per primera vegada el Sagrament de l'Eucaristia.",
+    "cat-1-time":"Dimarts de 17:30 a 18:30 h",
+    "cat-23-title":"Catequesi 2n i 3r Comunió","cat-23-sub":"Formació Sacramental","cat-23-desc":"Continuació del camí catequètic i aprofundiment sacramental per a 2n i 3r curs.",
+    "cat-23-time":"Dimecres de 17:30 a 18:30 h",
+    "cat-conf-title":"Catequesi de Confirmació","cat-conf-sub":"Joves","cat-conf-desc":"Formació de joves per a la reafirmació de la fe i recepció del do de l'Esperit Sant.",
+    "cat-conf-time":"Divendres a les 20:00 h",
+    "cat-itio-title":"Grups ITIO","cat-itio-sub":"Formació Poscomunió","cat-itio-desc":"Grup de formació i acompanyament continu en la fe després de rebre la Primera Comunió per a xiquets i adolescents.",
+    "cat-itio-time":"Divendres a les 18:30 h",
+    "cat-alpha-title":"Curs Alpha","cat-alpha-sub":"Explorant la fe i la vida","cat-alpha-desc":"Alpha és una oportunitat per a explorar la fe cristiana en un ambient relaxat, proper i obert. Cada sessió inclou un berenar, una xarrada i un temps de conversa. <strong>Començarà el 6 de novembre.</strong>",
+    "cat-alpha-time":"Inici: 6 de novembre","cat-alpha-link":"Web Oficial d'Alpha Espanya →",
+    "cat-adultos-title":"Pastoral d'adults","cat-adultos-sub":"Catequesi de confirmació d'adults","cat-adultos-desc":"Amb aquells adults que es vulguen confirmar (horari a convenir), es realitzarà un curs de formació per a rebre el sagrament de la confirmació.",
+    "cat-adultos-time":"Horari a convenir",
+    "cat-vida-title":"Equips de vida","cat-vida-sub":"Formar-se, viure i compartir la fe","cat-vida-desc":"Dirigit a aquells adults que volen formar-se, viure i compartir la fe. Es formaran equips de vida (horari a convenir), on puguem compartir la fe i crear un espai d'amistat i fraternitat.",
+    "cat-vida-time":"Horari a convenir",
+    "cat-enfermos-title":"Visitadors de malalts","cat-enfermos-sub":"Pastoral de la Salut i Atenció a Domicili","cat-enfermos-desc":"Totes les setmanes hi ha un equip de persones que porten la comunió a aquells que no poden eixir de les seues cases. Si vosté vol rebre la comunió, pot comunicar-ho a la parròquia.",
+    "cat-enfermos-time":"Atenció setmanal",
+    "cat-caritas-title":"Càritas Parroquial","cat-caritas-sub":"Acció Social i Caritat","cat-caritas-desc":"Servei d'acollida, atenció social, ajuda a les famílies necessitades i promoció de la caritat i solidaritat a Callosa d'en Sarrià.",
+    "cat-caritas-time":"A les 18:30 h",
+    "nav-donativos":"Donatius",
+    "don-badge":"Col·laboració Parroquial",
+    "don-title":"Donatius i Restauració",
+    "don-desc":"La teua col·laboració ajuda a mantindre viva la nostra església i a finançar els treballs de restauració, conservació del temple parroquial i història de Callosa d'en Sarrià.",
+    "don-account-lbl":"Número de compte de la Parròquia (Restauració)",
+    "don-account-val":"Compte de la Parròquia per a la Restauració del Temple",
+    "cofradias-eyebrow":"Devoció Popular","cofradias-title":"Confraries Parroquials",
+    "cofradias-sub":"Germandats i confraries de gran tradició i devoció popular vinculades a la vida parroquial de Callosa d'en Sarrià.",
+    "cof-injuries-desc":"Confraria dedicada a la veneració i custòdia del culte a la Mare de Déu de les Injúries, focus de profunda devoció popular en la seua capella i barri històric.",
+    "cof-cisne-desc":"Confraria dedicada a l'advocació i festivitat de la Verge del Cisne, promovent la fraternitat, la vida comunitària i la fe viva a Callosa d'en Sarrià.",
+    "cof-corazon-desc":"Confraria dedicada a la devoció i culte al Sagrat Cor de Jesús en la parròquia Sant Joan Baptista de Callosa d'en Sarrià.",
+    "historia-eyebrow":"Patrimoni i Història","historia-title":"Història de la parròquia",
+    "h-iglesia-h":"Església Sant Joan Baptista",
+    "h-iglesia-p1":"La primera notícia de l'església actual és de <strong>1574</strong>; en <strong>1578</strong> Francisco de Mesa la va inaugurar com a parròquia de Callosa. El creuer es va construir entre 1765 i 1786, i la façana de marbre de pedreres locals es va alçar entre 1819 i 1865; el cos superior, ja en ciment imitant marbre, es va afegir en 1917.",
+    "h-iglesia-p2":"El temple, de transició entre el barroc i el neoclàssic, conserva un <strong>orgue barroc de 1754</strong> portat d'un convent de Cocentaina en 1845, i una cúpula de teules blaves que es veu des de bona part de la vall.",
+    "h-fuente":"El cronista local <strong>Adolfo Salvá Ballester</strong> va documentar bona part d'esta història en la seua monografia <em>La Villa de Callosa de Ensarriá</em> (1960) i en el seu manuscrit sobre les visites pastorals a la parròquia entre 1633 i 1807.",
+    "cap-fachada":"Façana principal de marbre, Plaça d'Espanya",
+    "h-injurias-p1":"Conservat gelosament en el cor de l'església, este històric orgue barroc portat en 1845 des de Cocentaina representa una de les joies del patrimoni musical i litúrgic de Callosa d'en Sarrià.",
+    "cap-injurias":"Orgue barroc històric de 1754",
+    "h-asilo-p1":"Espai de culte i oració amb les seues imposants voltes i pilastres de transició barroc-neoclàssica que acullen la vida espiritual del poble de Callosa.",
+    "cap-asilo":"Interior de la nau principal del temple",
+    "sac-eyebrow":"Els nostres pastors","sac-title":"Sacerdots de la parròquia","sac-sub":"Al servei espiritual i pastoral de Callosa d'en Sarrià.",
+    "sac-rol-1":"Rector",
+    "sac-rol-2":"Vicari parroquial",
+    "foot-despacho":"Despatx parroquial"
+  },
+  en: {
+    "nav-horarios":"Mass times","nav-pastoral":"Pastoral","nav-cofradias":"Confraternities","nav-historia":"History","nav-sacerdotes":"Priests","nav-contacto":"Contact",
+    "hero-badge":"Archpriest Church · Since 1578",
+    "hero-title":"Parish San Juan Bautista",
+    "hero-lead":"Check mass times, pastoral groups, formation and how to get to each site.",
+    "hero-btn-1":"Mass times","hero-btn-pastoral":"Parish Pastoral",
+    "horarios-eyebrow":"Mass times","horarios-title":"Church and chapels",
+    "kicker-sede":"Parish church","kicker-capilla":"Chapel",
+    "titulo-iglesia":"Church San Juan Bautista","titulo-asilo":"Care Home Chapel",
+    "lbl-sabados":"Saturdays and vigils","lbl-domingos":"Sundays and holy days","lbl-entresemana":"Weekdays",
+    "lbl-injurias-dias1":"Mondays, Wednesdays and Thursdays","lbl-injurias-dias2":"Tuesdays and Fridays",
+    "lnk-llegar":"Get directions →",
+    "santisimo-badge":"Eucharistic Adoration",
+    "santisimo-title":"Exposition of the Blessed Sacrament",
+    "santisimo-desc":"Time for silent prayer, Eucharistic adoration and blessing. Held at the Our Lady of the Injuries Chapel.",
+    "santisimo-horario":"Our Lady of the Injuries Chapel · Thursdays 09:30 h",
+    "horarios-note":"Regular schedule for all three sites, unless changed for patronal feasts, Holy Week or other one-off reasons.",
+    "pastoral-eyebrow":"Parish Life","pastoral-title":"Pastoral",
+    "pastoral-sub":"Catechism groups, formation, community life and spiritual guidance for children, youth and adults.",
+    "cat-1-title":"1st Communion Catechism","cat-1-sub":"Sacramental Initiation","cat-1-desc":"First course of preparation to receive the Sacrament of the Eucharist.",
+    "cat-1-time":"Tuesdays from 17:30 to 18:30 h",
+    "cat-23-title":"2nd & 3rd Communion Catechism","cat-23-sub":"Sacramental Formation","cat-23-desc":"Continuation of catechism path and sacramental preparation for 2nd and 3rd year.",
+    "cat-23-time":"Wednesdays from 17:30 to 18:30 h",
+    "cat-conf-title":"Confirmation Catechism","cat-conf-sub":"Youth","cat-conf-desc":"Preparation of youth for confirmation of faith and receiving the Holy Spirit.",
+    "cat-conf-time":"Fridays at 20:00 h",
+    "cat-itio-title":"ITIO Groups","cat-itio-sub":"Post-Communion Formation","cat-itio-desc":"Continuous formation and accompaniment group in faith after First Communion for children and adolescents.",
+    "cat-itio-time":"Fridays at 18:30 h",
+    "cat-alpha-title":"Alpha Course","cat-alpha-sub":"Exploring faith and life","cat-alpha-desc":"Alpha is an opportunity to explore Christian faith in a relaxed, open atmosphere. Each session includes an afternoon snack, talk and discussion. <strong>Starts on November 6.</strong>",
+    "cat-alpha-time":"Start: November 6","cat-alpha-link":"Official Alpha Spain Website →",
+    "cat-adultos-title":"Adult Pastoral","cat-adultos-sub":"Adult Confirmation Catechism","cat-adultos-desc":"For adults seeking Confirmation (schedule to be agreed), a preparation course will be offered to receive the sacrament.",
+    "cat-adultos-time":"Schedule to be agreed",
+    "cat-vida-title":"Life Teams (Equipos de vida)","cat-vida-sub":"Formation, Faith and Fellowship","cat-vida-desc":"For adults seeking formation and living faith. Life teams will be formed to share faith and create a space of friendship and fraternity.",
+    "cat-vida-time":"Schedule to be agreed",
+    "cat-enfermos-title":"Home Visitors to the Sick","cat-enfermos-sub":"Healthcare Pastoral & Home Care","cat-enfermos-desc":"Every week a team brings Holy Communion to those unable to leave home. Please notify the parish office if you wish to receive Communion.",
+    "cat-enfermos-time":"Weekly Service",
+    "cat-caritas-title":"Parish Caritas","cat-caritas-sub":"Social Action & Charity","cat-caritas-desc":"Welcome service, social care, assistance to families in need and solidarity promotion in Callosa d'en Sarrià.",
+    "cat-caritas-time":"At 18:30 h",
+    "nav-donativos":"Donations",
+    "don-badge":"Parish Support",
+    "don-title":"Donations & Restoration",
+    "don-desc":"Your support helps maintain our church and fund restoration work, heritage conservation, and parish pastoral activities in Callosa d'en Sarrià.",
+    "don-account-lbl":"Parish Account Number (Restoration)",
+    "don-account-val":"Parish Account for Temple Restoration",
+    "cofradias-eyebrow":"Popular Devotion","cofradias-title":"Parish Confraternities",
+    "cofradias-sub":"Traditional brotherhoods and confraternities of popular devotion connected to parish life in Callosa d'en Sarrià.",
+    "cof-injuries-desc":"Confraternity dedicated to Our Lady of the Injuries, a deep centre of popular devotion in her chapel and historic neighbourhood.",
+    "cof-cisne-desc":"Confraternity dedicated to Our Lady of El Cisne, fostering fraternity, community life and living faith in Callosa d'en Sarrià.",
+    "cof-corazon-desc":"Confraternity dedicated to the devotion and spirituality of the Sacred Heart of Jesus in Callosa d'en Sarrià parish.",
+    "historia-eyebrow":"Heritage & History","historia-title":"Parish history",
+    "h-iglesia-h":"Church San Juan Bautista",
+    "h-iglesia-p1":"The earliest record of the current church dates from <strong>1574</strong>; in <strong>1578</strong> Francisco de Mesa opened it as Callosa's parish church. The transept was built between 1765 and 1786, and the marble façade, using stone from local quarries, went up between 1819 and 1865; the upper section, in concrete made to look like marble, was added in 1917.",
+    "h-iglesia-p2":"The church, built in the transition from Baroque to Neoclassical style, houses a <strong>1754 Baroque organ</strong> brought from a convent in Cocentaina in 1845, and a blue-tiled dome visible from much of the valley.",
+    "h-fuente":"Local historian <strong>Adolfo Salvá Ballester</strong> documented much of this history in his book <em>La Villa de Callosa de Ensarriá</em> (1960) and in his manuscript on the parish's pastoral visits between 1633 and 1807.",
+    "cap-fachada":"Main marble façade, Plaça d'Espanya",
+    "h-injurias-p1":"Preserved in the church choir, this historic 1754 Baroque organ brought from Cocentaina in 1845 is a musical treasure of Callosa d'en Sarrià.",
+    "cap-injurias":"Historic 1754 Baroque organ",
+    "h-asilo-p1":"A space for worship and prayer featuring majestic vaults and transept columns of Callosa's archpriest church.",
+    "cap-asilo":"Inside the main nave of the church",
+    "sac-eyebrow":"Our pastors","sac-title":"Parish priests","sac-sub":"At the spiritual service of Callosa d'en Sarrià.",
+    "sac-rol-1":"Parish priest",
+    "sac-rol-2":"Assistant priest",
+    "foot-despacho":"Parish office"
+  }
+};
+
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    const key = el.getAttribute('data-i18n');
+    const dict = i18n[lang] || i18n.es;
+    if(dict[key] === undefined) return;
+    if(el.hasAttribute('data-i18n-html')){
+      el.innerHTML = dict[key];
+    } else {
+      el.textContent = dict[key];
+    }
+  });
+  document.documentElement.lang = lang === 'va' ? 'ca' : lang;
+  document.querySelectorAll('.lang-switch button').forEach(function(b){
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+}
+
+document.querySelectorAll('.lang-switch button').forEach(function(btn){
+  btn.addEventListener('click', function(){ setLang(btn.getAttribute('data-lang')); });
+});
+</script>
+
+</body>
+</html>

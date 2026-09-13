@@ -3,8 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parròquia Sant Joan Baptista — Callosa d'en Sarrià</title>
-<meta name="description" content="Parroquia San Juan Bautista de Callosa d'en Sarrià. Horarios de misa, pastoral, ITIO, Curso Alpha, cofradías y contacto.">
+
+<!-- ═══ SEO Principal ═══ -->
+<title>Parroquia San Juan Bautista Callosa d'en Sarrià | Horarios de Misa</title>
+<meta name="description" content="Parroquia San Juan Bautista de Callosa d'en Sarrià (Alicante). Consulta los horarios de misa en la iglesia, Capilla Virgen de las Injurias y Capilla del Asilo. Pastoral, catequesis y contacto.">
+<meta name="keywords" content="parroquia Callosa den Sarria, misa Callosa, horarios misa Callosa den Sarria, iglesia San Juan Bautista Callosa, parroquia Alicante Marina Baixa, catequesis Callosa">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Parroquia San Juan Bautista — Callosa d'en Sarrià">
+<link rel="canonical" href="https://parroquiacallosadensarria.es/">
+
+<!-- ═══ Geolocalización ═══ -->
+<meta name="geo.region" content="ES-A">
+<meta name="geo.placename" content="Callosa d'en Sarrià, Alicante">
+<meta name="geo.position" content="38.6513581;-0.1221180">
+<meta name="ICBM" content="38.6513581, -0.1221180">
+
+<!-- ═══ Open Graph (Facebook / redes sociales) ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Parroquia San Juan Bautista — Callosa d'en Sarrià">
+<meta property="og:title" content="Parroquia San Juan Bautista | Callosa d'en Sarrià">
+<meta property="og:description" content="Horarios de misa, pastoral, catequesis y contacto de la Parroquia San Juan Bautista de Callosa d'en Sarrià (Alicante).">
+<meta property="og:url" content="https://parroquiacallosadensarria.es/">
+<meta property="og:locale" content="es_ES">
+
+<!-- ═══ Twitter Card ═══ -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Parroquia San Juan Bautista | Callosa d'en Sarrià">
+<meta name="twitter:description" content="Horarios de misa, pastoral, catequesis y contacto de la Parroquia San Juan Bautista de Callosa d'en Sarrià (Alicante).">
+
+<!-- ═══ Schema.org — Church (JSON-LD) ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Church",
+  "name": "Parroquia San Juan Bautista de Callosa d'en Sarrià",
+  "alternateName": "Parròquia Sant Joan Baptista de Callosa d'en Sarrià",
+  "url": "https://parroquiacallosadensarria.es/",
+  "description": "Iglesia arciprestal de Callosa d'en Sarrià (Alicante), fundada en 1578. Sede parroquial, Capilla de la Virgen de las Injurias y Capilla del Asilo.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plaça d'Espanya, 10",
+    "addressLocality": "Callosa d'en Sarrià",
+    "addressRegion": "Alicante",
+    "postalCode": "03510",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.6513581,
+    "longitude": -0.1221180
+  },
+  "telephone": "",
+  "openingHours": [
+    "Sa 19:30",
+    "Su 09:30",
+    "Su 11:00"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/parroquia_callosa_den_sarria/",
+    "https://www.facebook.com/p/Parroquia-San-Juan-Bautista-Callosa-den-Sarri%C3%A0-100067966658353/"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -272,7 +332,7 @@
   .hero-photo {
     position: absolute;
     inset: 0;
-    background-image: url('imagenes/hero.jpg');
+    background-image: url('imagenes/hero.webp');
     background-size: cover;
     background-position: center;
     filter: brightness(0.62) contrast(1.1);
@@ -545,7 +605,9 @@
     font-size: 1.1rem;
     color: var(--oro-glow);
     font-weight: 800;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+    flex-wrap: wrap;
   }
   .santisimo-time svg { fill: var(--oro-glow); width: 20px; height: 20px; }
 
@@ -1061,9 +1123,9 @@
   #sacerdotes { background: var(--surface); }
   .priests-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 36px;
-    max-width: 860px;
+    max-width: 400px;
     margin: 0 auto;
   }
   .priest-card {
@@ -1240,7 +1302,7 @@
     .cofradias-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .santisimo-banner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 24px; }
     .santisimo-thumb { width: 100%; height: 160px; }
-    .santisimo-time { width: 100%; justify-content: center; }
+    .santisimo-time { width: 100%; justify-content: center; font-size: 0.95rem; }
     .donativos-banner { padding: 28px 20px; }
     .donativos-box { flex-direction: column; align-items: flex-start; gap: 14px; }
     .iban-row { width: 100%; flex-wrap: wrap; justify-content: space-between; }
@@ -1302,7 +1364,7 @@
         </defs>
       </svg>
       <div class="brand-text">
-        Sant Joan Baptista
+        San Juan Bautista
         <small>Callosa d'en Sarrià</small>
       </div>
     </a>
@@ -1378,7 +1440,7 @@
           <tr><td data-i18n="lbl-domingos">Misas los Domingos</td><td>9:30 h y 11:00 h</td></tr>
         </table>
         <div class="map-frame">
-          <img src="imagenes/fachada.jpg" alt="Fachada de la Iglesia San Juan Bautista" class="map-img" />
+          <img src="imagenes/fachada.webp" alt="Fachada de la Iglesia San Juan Bautista" class="map-img" />
         </div>
         <div class="card-links">
           <a href="https://www.google.com/maps/dir/?api=1&destination=38.6513581,-0.1221180" target="_blank" rel="noopener" data-i18n="lnk-llegar">Cómo llegar →</a>
@@ -1415,7 +1477,7 @@
           <tr><td data-i18n="lbl-entresemana">Misa entre semana</td><td>08:30 h</td></tr>
         </table>
         <div class="map-frame">
-          <img src="imagenes/capilla_asilo.jpg" alt="Capilla del Asilo" class="map-img" />
+          <img src="imagenes/capilla_asilo.webp" alt="Capilla del Asilo" class="map-img" />
         </div>
         <div class="card-links">
           <a href="https://www.google.com/maps/dir/?api=1&destination=38.6542648,-0.1204966" target="_blank" rel="noopener" data-i18n="lnk-llegar">Cómo llegar →</a>
@@ -1427,7 +1489,7 @@
     <!-- EXPOSICIÓN DEL SANTÍSIMO SACRAMENTO BANNER CON FOTO REAL AJUSTADA -->
     <div class="santisimo-banner">
       <div class="santisimo-thumb">
-        <img src="imagenes/adoracion_eucaristica.jpg" alt="Exposición del Santísimo Sacramento en la Capilla de la Virgen de las Injurias">
+        <img src="imagenes/adoracion_eucaristica.webp" alt="Exposición del Santísimo Sacramento en la Capilla de la Virgen de las Injurias">
       </div>
       <div class="santisimo-content">
         <div class="santisimo-badge" data-i18n="santisimo-badge">Culto Eucarístico</div>
@@ -1699,14 +1761,7 @@
         <div class="role" data-i18n="sac-rol-1">Párroco</div>
       </article>
 
-      <!-- VICARIO -->
-      <article class="priest-card">
-        <div class="priest-avatar-outer">
-          <img src="imagenes/kamil.jpg" alt="D. Kamil — Vicario parroquial" class="priest-photo">
-        </div>
-        <h3>D. Kamil</h3>
-        <div class="role" data-i18n="sac-rol-2">Vicario parroquial</div>
-      </article>
+
     </div>
   </div>
 </section>

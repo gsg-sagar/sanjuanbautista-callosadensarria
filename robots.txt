@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /politica.html
+
+Sitemap: https://parroquiacallosadensarria.es/sitemap.xml

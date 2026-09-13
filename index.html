@@ -1233,12 +1233,44 @@
     gap: 12px;
   }
 
+  /* ---------- Responsive Media Queries (Tablets & Mobile) ---------- */
   @media (max-width: 980px) {
+    .horarios-grid { grid-template-columns: 1fr; grid-template-areas: "iglesia" "injurias" "asilo"; gap: 24px; }
+    .pastoral-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .cofradias-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .santisimo-banner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 24px; }
+    .santisimo-thumb { width: 100%; height: 160px; }
+    .santisimo-time { width: 100%; justify-content: center; }
+    .donativos-banner { padding: 28px 20px; }
+    .donativos-box { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .iban-row { width: 100%; flex-wrap: wrap; justify-content: space-between; }
+    .priests-grid { grid-template-columns: 1fr; gap: 24px; max-width: 480px; }
     footer .wrap { grid-template-columns: 1fr 1fr; gap: 32px; }
   }
+
   @media (max-width: 640px) {
+    section { padding: 56px 0; }
+    .wrap { padding: 0 20px; }
+    .nav { padding: 10px 20px; }
+    .hero { min-height: auto; padding: 48px 0; }
+    .hero h1 { font-size: 1.9rem; }
+    .hero p.lead { font-size: 1rem; }
+    .hero .cta-row { flex-direction: column; width: 100%; gap: 12px; }
+    .hero .cta-row .btn { width: 100%; justify-content: center; }
+    .pastoral-grid { grid-template-columns: 1fr; gap: 18px; }
+    .cofradias-grid { grid-template-columns: 1fr; gap: 18px; }
     footer .wrap { grid-template-columns: 1fr; gap: 28px; }
-    .footer-bottom { flex-direction: column; text-align: center; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+  }
+
+  @media (max-width: 480px) {
+    .brand-text { font-size: 0.98rem; }
+    .brand-text small { font-size: 0.58rem; }
+    .brand-icon { width: 36px; height: 36px; }
+    .donativos-iban { font-size: 0.92rem; word-break: break-all; }
+    .btn-copy { width: 100%; margin-top: 6px; }
+    .iban-row { flex-direction: column; align-items: stretch; width: 100%; }
+    .site-card { padding: 22px 18px; }
   }
 </style>
 </head>
@@ -1328,8 +1360,8 @@
 <section id="horarios">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow" data-i18n="horarios-eyebrow">Horarios de culto</div>
-      <h2 data-i18n="horarios-title">Iglesia y capillas</h2>
+      <div class="eyebrow" data-i18n="horarios-eyebrow">Horarios de Santa Misa y culto</div>
+      <h2 data-i18n="horarios-title">Horarios de Misas</h2>
     </div>
 
     <div class="horarios-grid">
@@ -1342,8 +1374,8 @@
           <address>Plaça d'Espanya, 10 · 03510 Callosa d'en Sarrià</address>
         </div>
         <table class="horario">
-          <tr><td data-i18n="lbl-sabados">Sábados y vísperas</td><td>19:30 h</td></tr>
-          <tr><td data-i18n="lbl-domingos">Domingos y festivos</td><td>11:00 h y 19:30 h</td></tr>
+          <tr><td data-i18n="lbl-sabados">Misa los Sábados</td><td>19:30 h</td></tr>
+          <tr><td data-i18n="lbl-domingos">Misas los Domingos</td><td>9:30 h y 11:00 h</td></tr>
         </table>
         <div class="map-frame">
           <img src="imagenes/fachada.jpg" alt="Fachada de la Iglesia San Juan Bautista" class="map-img" />
@@ -1361,8 +1393,8 @@
           <address>Carrer Verge de les Injúries, s/n · 03510 Callosa d'en Sarrià</address>
         </div>
         <table class="horario">
-          <tr><td data-i18n="lbl-injurias-dias1">Lunes, miércoles y jueves</td><td>19:30 h</td></tr>
-          <tr><td data-i18n="lbl-injurias-dias2">Martes y viernes</td><td>09:30 h</td></tr>
+          <tr><td data-i18n="lbl-injurias-dias1">Misa (Lunes, miércoles y jueves)</td><td>19:30 h</td></tr>
+          <tr><td data-i18n="lbl-injurias-dias2">Misa (Martes y viernes)</td><td>09:30 h</td></tr>
         </table>
         <div class="map-frame">
           <img src="imagenes/capilla_virgeninjurias.webp" alt="Capilla Virgen de las Injurias" class="map-img" />
@@ -1380,7 +1412,7 @@
           <address>Carrer Ausiàs March, 5 · 03510 Callosa d'en Sarrià</address>
         </div>
         <table class="horario">
-          <tr><td data-i18n="lbl-entresemana">Entre semana</td><td>10:00 h</td></tr>
+          <tr><td data-i18n="lbl-entresemana">Misa entre semana</td><td>08:30 h</td></tr>
         </table>
         <div class="map-frame">
           <img src="imagenes/capilla_asilo.jpg" alt="Capilla del Asilo" class="map-img" />
@@ -1782,11 +1814,11 @@ const i18n = {
     "hero-title":"Parroquia San Juan Bautista",
     "hero-lead":"Consulta los horarios de misa, pastoral, grupos de formación y cómo llegar a cada templo.",
     "hero-btn-1":"Horarios de misa","hero-btn-pastoral":"Pastoral Parroquial",
-    "horarios-eyebrow":"Horarios de culto","horarios-title":"Iglesia y capillas",
+    "horarios-eyebrow":"Horarios de Santa Misa y culto","horarios-title":"Horarios de Misas",
     "kicker-sede":"Sede parroquial","kicker-capilla":"Capilla",
     "titulo-iglesia":"Iglesia San Juan Bautista","titulo-asilo":"Capilla del Asilo",
-    "lbl-sabados":"Sábados y vísperas","lbl-domingos":"Domingos y festivos","lbl-entresemana":"Entre semana",
-    "lbl-injurias-dias1":"Lunes, miércoles y jueves","lbl-injurias-dias2":"Martes y viernes",
+    "lbl-sabados":"Misa los Sábados","lbl-domingos":"Misas los Domingos","lbl-entresemana":"Misa entre semana",
+    "lbl-injurias-dias1":"Misa (Lunes, miércoles y jueves)","lbl-injurias-dias2":"Misa (Martes y viernes)",
     "lnk-llegar":"Cómo llegar →",
     "santisimo-badge":"Culto Eucarístico",
     "santisimo-title":"Exposición del Santísimo Sacramento",
@@ -1845,11 +1877,11 @@ const i18n = {
     "hero-title":"Parròquia Sant Joan Baptista",
     "hero-lead":"Consulta els horaris de missa, pastoral, grups de formació i com arribar a cada temple.",
     "hero-btn-1":"Horaris de missa","hero-btn-pastoral":"Pastoral Parroquia",
-    "horarios-eyebrow":"Horaris de culte","horarios-title":"Església i capelles",
+    "horarios-eyebrow":"Horaris de Santa Missa i culte","horarios-title":"Horaris de Misses",
     "kicker-sede":"Seu parroquial","kicker-capilla":"Capella",
     "titulo-iglesia":"Església Sant Joan Baptista","titulo-asilo":"Capella de l'Asil",
-    "lbl-sabados":"Dissabtes i vespres","lbl-domingos":"Diumenges i festius","lbl-entresemana":"Entre setmana",
-    "lbl-injurias-dias1":"Dilluns, dimecres i dijous","lbl-injurias-dias2":"Dimarts i divendres",
+    "lbl-sabados":"Missa els Dissabtes","lbl-domingos":"Misses els Diumenges","lbl-entresemana":"Missa entre setmana",
+    "lbl-injurias-dias1":"Missa (Dilluns, dimecres i dijous)","lbl-injurias-dias2":"Missa (Dimarts i divendres)",
     "lnk-llegar":"Com arribar →",
     "santisimo-badge":"Culte Eucarístic",
     "santisimo-title":"Exposició del Santíssim Sagrament",
@@ -1908,11 +1940,11 @@ const i18n = {
     "hero-title":"Parish San Juan Bautista",
     "hero-lead":"Check mass times, pastoral groups, formation and how to get to each site.",
     "hero-btn-1":"Mass times","hero-btn-pastoral":"Parish Pastoral",
-    "horarios-eyebrow":"Mass times","horarios-title":"Church and chapels",
+    "horarios-eyebrow":"Holy Mass times & Worship","horarios-title":"Mass Schedule",
     "kicker-sede":"Parish church","kicker-capilla":"Chapel",
     "titulo-iglesia":"Church San Juan Bautista","titulo-asilo":"Care Home Chapel",
-    "lbl-sabados":"Saturdays and vigils","lbl-domingos":"Sundays and holy days","lbl-entresemana":"Weekdays",
-    "lbl-injurias-dias1":"Mondays, Wednesdays and Thursdays","lbl-injurias-dias2":"Tuesdays and Fridays",
+    "lbl-sabados":"Saturday Mass","lbl-domingos":"Sunday Masses","lbl-entresemana":"Weekday Mass",
+    "lbl-injurias-dias1":"Mass (Mondays, Wednesdays & Thursdays)","lbl-injurias-dias2":"Mass (Tuesdays & Fridays)",
     "lnk-llegar":"Get directions →",
     "santisimo-badge":"Eucharistic Adoration",
     "santisimo-title":"Exposition of the Blessed Sacrament",
